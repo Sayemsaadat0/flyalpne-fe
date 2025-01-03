@@ -1,70 +1,27 @@
 {
   "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
-    "allowUnreachableCode": false,
-    "allowUnusedLabels": false,
-    "baseUrl": ".",
-    "declaration": true,
-    "declarationMap": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "incremental": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "module": "esnext",
-    "moduleResolution": "node",
-    "noEmit": false,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
-    "noImplicitOverride": true,
-    "noImplicitReturns": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "outDir": "./out",
-    "preserveSymlinks": true,
-    "pretty": true,
-    "removeComments": true,
-    "resolveJsonModule": true,
-    "rootDirs": ["public", "src"],
-    "skipLibCheck": true,
-    "sourceMap": true,
-    "strict": true,
-    "target": "es2021",
+    "incremental": true,
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "@/*": ["./src/*"],
-      "@app/*": ["./src/app/*"],
-      "@components/*": ["./src/components/*"],
-      "@data/*": ["./src/data/*"],
-      "@hooks/*": ["./src/hooks/*"],
-      "@images/*": ["./public/images/*"],
-      "@libs/*": ["./src/libs/*"],
-      "@models/*": ["./src/models/*"],
-      "@styles/*": ["./src/styles/*"]
+      "@/*": ["./src/*"]
     }
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    "out/types/**/*.ts",
-    "src/app/(root)/product/[slug]"
-  ],
-  "exclude": ["node_modules", ".next", "out", "dist", "*.d.ts"],
-  "types": [
-    "types",
-    "node",
-    "react",
-    "react-dom",
-    "tailwindcss",
-    "commitlint/types",
-    "react-datepicker",
-    "google.maps"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
 }
