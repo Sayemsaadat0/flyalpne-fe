@@ -39,3 +39,13 @@ API_URL
 NEXTAUTH_URL
 JWT_SICRECT_KEY
 NEXTAUTH_SECRET
+
+
+## When commit 
+feat 
+fix
+refactor
+style
+test
+
+use tese prefix before main commit . Example : 'feat: new featured about---- added to the root file'
