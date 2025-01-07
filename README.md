@@ -40,9 +40,9 @@ NEXTAUTH_URL
 JWT_SICRECT_KEY
 NEXTAUTH_SECRET
 
+## When commit
 
-## When commit 
-feat 
+feat
 fix
 refactor
 style
