@@ -8,8 +8,8 @@ const template = ({ children }: { children: React.ReactNode }) => {
     <div>
       {/* <DefaultNavbar /> */}
       <div className="mt-44 md:mt-50 min-h-[90vh] ">{children}</div>
-      {/* <DefaultFooter /> */}
-      {/* <Toaster /> */}
+      {/* <DefaultFooter />
+            <Toaster /> */}
     </div>
   );
 };

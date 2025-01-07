@@ -44,12 +44,12 @@ const eslintConfig = {
     '@typescript-eslint/no-explicit-any': 0,
     '@typescript-eslint/no-var-requires': 0,
     '@typescript-eslint/no-use-before-define': 0,
-    '@typescript-eslint/no-unused-vars': [
-      2,
-      {
-        argsIgnorePattern: '^_',
-      },
-    ],
+    // '@typescript-eslint/no-unused-vars': [
+    //   2,
+    //   {
+    //     argsIgnorePattern: '^_',
+    //   },
+    // ],
     'no-console': [
       2,
       {
