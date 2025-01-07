@@ -60,9 +60,7 @@ const NavbarCategory = () => {
   const pathname = usePathname();
   return (
     <div className="flex items-center justify-between gap-10 ">
-      <div>
-      
-      </div>
+      <div></div>
       <div className="hidden md:flex lg:hidden">
         <ProfileMenuForHomepage />
       </div>
@@ -109,7 +107,7 @@ const DefaultNavbar: React.FC = () => {
   return (
     <div
       className={`py-2 z-50 bg-f-white-200 transition-all ease-in-out w-full fixed top-0 left-0  `}
-    // ${navBg ? '' : 'absolute top-5 md:top-0'}
+      // ${navBg ? '' : 'absolute top-5 md:top-0'}
     >
       <nav className="fly-commonContainer">
         <div className="hidden md:block">

@@ -58,7 +58,6 @@ const NavbarCategory = () => {
   const pathname = usePathname();
   return (
     <div className="flex items-center gap-10 ">
-     
       <div className="flex gap-5">
         {NavItems.map((item) => (
           <div className="min-w-20" key={Math.random()}>
@@ -167,8 +166,6 @@ const SellerNavbar: React.FC = () => {
 };
 
 export default SellerNavbar;
-
-
 
 /* 
 <div>
