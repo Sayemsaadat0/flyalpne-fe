@@ -13,7 +13,6 @@ import { ShoppingBag } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
-import DashboardIcon from '../icons/Dashboard/DashboardIcon';
 import ProfileMenuForHomepage from '../DropdownMenuContent/ProfileMenuForHomepage';
 import { ProfileMenu } from '../Dashboard/User Dashboard Container/ProfileMenu';
 import Logo from '../Logo/Logo';
@@ -52,17 +51,17 @@ const NavbarCategory = () => {
     {
       pathname: 'Home',
       path_route: '/',
-      icon: <DashboardIcon size={'24'} />,
+      // icon: <DashboardIcon size={'24'} />,
     },
     {
       pathname: 'Vendors',
       path_route: '/singleSeller/sdfssdddf',
-      icon: <DashboardIcon size={'24'} />,
+      // icon: <DashboardIcon size={'24'} />,
     },
     {
       pathname: 'Blogs',
       path_route: '/blogs',
-      icon: <DashboardIcon size={'24'} />,
+      // icon: <DashboardIcon size={'24'} />,
     },
   ];
 
