@@ -72,7 +72,7 @@ const LoginContainer = () => {
           </div>
         </div>
         <div className="w-full flex justify-center">
-          <Button disabled={isSubmitting} className="w-full md:w-[80%] text-lg">
+          <Button disabled={isSubmitting} className="w-full text-white bg-f-primary-1-500 md:w-[80%] text-lg">
             Login
           </Button>
         </div>
