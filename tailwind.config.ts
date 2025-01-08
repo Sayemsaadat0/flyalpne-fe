@@ -63,8 +63,8 @@ export default {
         'f-white-800': '#878787',
         'f-white-900': '#6b6b6b',
 
-      // --- for seller 
-      's-primary-1' : '#9B3F47'
+        // --- for seller
+        's-primary-1': '#9B3F47',
       },
       borderRadius: {
         lg: 'var(--radius)',

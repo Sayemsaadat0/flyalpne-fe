@@ -23,7 +23,7 @@ const LoginContainer = () => {
     onSubmit: async () => {
       try {
         // Call Function Here
-      } catch (err) { }
+      } catch (err) {}
     },
   });
 
@@ -72,9 +72,7 @@ const LoginContainer = () => {
           </div>
         </div>
         <div className="w-full flex justify-center">
-          <Button
-            disabled={isSubmitting}
-            className="w-full md:w-[80%] text-lg">
+          <Button disabled={isSubmitting} className="w-full md:w-[80%] text-lg">
             Login
           </Button>
         </div>

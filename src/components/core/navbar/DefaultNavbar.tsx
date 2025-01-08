@@ -20,6 +20,7 @@ import Logo from '../Logo/Logo';
 import { SearchInput } from '../input/SearchInput';
 // import { CartIcon } from '../icons/publicIcon/PublicPageIcons';
 import MenuIcon from '../icons/publicIcon/MenuIcon';
+import { CartIcon } from '../icons/publicIcon/PublicPageIcons';
 
 const NavbarCategory = () => {
   const category = [
@@ -194,7 +195,7 @@ const DefaultNavbar: React.FC = () => {
               <SearchInput />
             </div>
             <Link href="/user/cart" className="relative">
-              {/* <CartIcon className="text-f-primary-1" size={'32'} /> */}
+              <CartIcon className="text-f-primary-1" size={'32'} />
               <span className="absolute text-center -top-0 bg-f-primary-2-400 text-f-white-200 w-5 h-5 flex  items-center justify-center rounded-full text-[10px] -right-2">
                 99+
               </span>

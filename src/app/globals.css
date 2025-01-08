@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-
 :root {
   --customize-font: 'Quicksand', sans-serif;
 }
@@ -18,17 +15,15 @@ body {
   font-weight: 400;
 }
 
-
-
 .zoomOut {
-	-webkit-transform: scale(1.5);
-	transform: scale(1.5);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 .zoomOut:hover {
-	-webkit-transform: scale(1);
-	transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }
 /*  */
 .swiper-button-next {
@@ -56,7 +51,6 @@ body {
   height: 100%;
 } */
 
-
 /* .swiper-pagination-bullet {
   width: 14px !important;
   height: 14px !important;
@@ -82,8 +76,6 @@ body {
   align-items: center;
 }
 
-
-
 /* Container */
 .fly-commonContainer {
   max-width: 1720px;
@@ -92,7 +84,6 @@ body {
   padding-left: 40px;
   padding-right: 40px;
 }
-
 
 @media screen and (max-width: 1280px) {
   .fly-commonContainer {
@@ -115,7 +106,8 @@ body {
   }
 }
 
-@media screen and (max-width: 400px) {}
+@media screen and (max-width: 400px) {
+}
 
 @media screen and (max-width: 340px) {
   .fly-commonContainer {
