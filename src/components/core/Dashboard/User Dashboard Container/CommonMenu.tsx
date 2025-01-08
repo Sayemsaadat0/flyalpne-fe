@@ -51,7 +51,7 @@ const CommonMenu = ({ open, setOpen }: any) => {
       <button
         className="flex font-bold items-center gap-3 [&.active]:bg-f-primary-1-300 px-4  [&.active]:text-white rounded-lg py-2 text-muted-foreground transition-all hover:text-primary"
         onClick={() => {
-          handleLinkClick;
+          handleLinkClick();
           navigate.push('/');
         }}
       >
