@@ -1,9 +1,8 @@
 'use client';
-import { toast } from '@/hooks/use-toast';
+// import { toast } from "@/hooks/use-toast";
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import TextInput from '../input/TextInput';
-import Button from '@/components/ui/button';
 import Link from 'next/link';
 import WhatsappIcon from '../icons/publicIcon/WhatsappIcon';
 import SkypeIcon from '../icons/publicIcon/SkypeIcon';
@@ -11,6 +10,7 @@ import FacebookIcon from '../icons/publicIcon/FacebookIcon';
 import LinkedinIcon from '../icons/publicIcon/LinkedinIcon';
 import InstagramIcon from '../icons/publicIcon/InstagramIcon';
 import Logo from '../logo/Logo';
+import Button from '@/components/ui/button2';
 
 // Define the types for the props of the Newsletter component
 type NewsletterProps = {
@@ -30,16 +30,16 @@ const Newsletter: React.FC<NewsletterProps> = ({ handleDataSubmit, isLoading }) 
     onSubmit: async (data) => {
       try {
         await handleDataSubmit(data);
-        toast({
-          //   variant: 'success',
-          description: 'Subscription completed',
-        });
+        // toast({
+        //     //   variant: 'success',
+        //     description: 'Subscription completed',
+        // });
         resetForm();
       } catch (err: any) {
         err.errors.forEach((key: { attr: string; detail: string }) => {
-          toast({
-            description: `${key?.attr} - ${key?.detail}`,
-          });
+          // toast({
+          //     description: `${key?.attr} - ${key?.detail}`,
+          // });
         });
       }
     },
@@ -58,12 +58,7 @@ const Newsletter: React.FC<NewsletterProps> = ({ handleDataSubmit, isLoading }) 
           placeholder="Enter Your Email"
         />
         <div>
-          <Button
-            type="submit"
-            disabled={isLoading}
-            className="w-full"
-            label={isLoading ? 'Sending..' : 'Sent'}
-          />
+          <Button  type="submit" variant={'primarybtn'} className="w-full"label={isLoading ? 'Sending..' : 'Sent'} /> 
         </div>
       </form>
     </div>

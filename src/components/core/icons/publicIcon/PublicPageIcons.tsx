@@ -71,9 +71,10 @@ export const StarIcon: React.FC<IconType> = ({ size, className, ...props }) => {
   );
 };
 
-export const WavyIcon: React.FC<IconType> = () => {
+export const WavyIcon: React.FC<IconType> = ({ size, className, ...props }) => {
   return (
     <svg
+    {...props}
       width="100%"
       height="100%"
       id="svg"

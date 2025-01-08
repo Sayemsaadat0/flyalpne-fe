@@ -1,38 +1,47 @@
 'use client';
-
-// } from '@/components/ui/menubar';
+import {
+  Menubar,
+  MenubarContent,
+  MenubarItem,
+  MenubarMenu,
+  MenubarSub,
+  MenubarSubContent,
+  MenubarSubTrigger,
+  MenubarTrigger,
+} from '@/components/ui/menubar';
+import { ShoppingBag } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
-import { ProfileMenu } from '../Dashboard/User Dashboard Container/ProfileMenu';
 import ProfileMenuForHomepage from '../DropdownMenuContent/ProfileMenuForHomepage';
-import DashboardIcon from '../icons/dashboard/DashboardIcon';
-// import MenuIcon from '../icons/publicIcon/MenuIcon';
-import { CartIcon } from '../icons/publicIcon/PublicPageIcons';
+import { ProfileMenu } from '../Dashboard/User Dashboard Container/ProfileMenu';
+// import Logo from '../Logo/Logo';
 import { SearchInput } from '../input/SearchInput';
+// import { CartIcon } from '../icons/publicIcon/PublicPageIcons';
+import MenuIcon from '../icons/publicIcon/MenuIcon';
+import { CartIcon } from '../icons/publicIcon/PublicPageIcons';
 import Logo from '../logo/Logo';
-import { ShoppingBag } from 'lucide-react';
 
 const NavbarCategory = () => {
-  // const category = [
-  //   {
-  //     title: 'Desktop',
-  //     url: '/',
-  //   },
-  //   {
-  //     title: 'Mouse',
-  //     sub_Category: [
-  //       {
-  //         title: 'Wired',
-  //         url: '/wired',
-  //       },
-  //       {
-  //         title: 'Wireless',
-  //         url: '/wireless',
-  //       },
-  //     ],
-  //   },
-  // ];
+  const category = [
+    {
+      title: 'Desktop',
+      url: '/',
+    },
+    {
+      title: 'Mouse',
+      sub_Category: [
+        {
+          title: 'Wired',
+          url: '/wired',
+        },
+        {
+          title: 'Wireless',
+          url: '/wireless',
+        },
+      ],
+    },
+  ];
 
   const NavItems = [
     {
@@ -43,24 +52,68 @@ const NavbarCategory = () => {
     {
       pathname: 'Home',
       path_route: '/',
-      icon: <DashboardIcon size={'24'} />,
+      // icon: <DashboardIcon size={'24'} />,
     },
     {
       pathname: 'Vendors',
       path_route: '/singleSeller/sdfssdddf',
-      icon: <DashboardIcon size={'24'} />,
+      // icon: <DashboardIcon size={'24'} />,
     },
     {
       pathname: 'Blogs',
       path_route: '/blogs',
-      icon: <DashboardIcon size={'24'} />,
+      // icon: <DashboardIcon size={'24'} />,
     },
   ];
 
   const pathname = usePathname();
   return (
     <div className="flex items-center justify-between gap-10 ">
-      <div></div>
+      <div>
+        {/* <Menubar>
+          <MenubarMenu>
+            <MenubarTrigger className="space-x-3">
+              <MenuIcon />
+              <p>All Category</p>
+            </MenubarTrigger>
+            <MenubarContent>
+              {category.map((item, index) => (
+                <div key={index}>
+                  Check if subcategories exist
+                  {item.sub_Category ? (
+                    <MenubarSub>
+                      <MenubarSubTrigger className="group">
+                        <span className="group-hover:translate-x-3 transition-all duration-500">
+                          {item.title}
+                        </span>
+                      </MenubarSubTrigger>
+                      <MenubarSubContent>
+                        {item.sub_Category.map((subItem, subIndex) => (
+                          <MenubarItem key={subIndex} asChild>
+                            <Link href={subItem.url} className="group ">
+                              <span className="group-hover:translate-x-3 transition-all duration-500">
+                                {subItem.title}
+                              </span>
+                            </Link>
+                          </MenubarItem>
+                        ))}
+                      </MenubarSubContent>
+                    </MenubarSub>
+                  ) : (
+                    <MenubarItem asChild>
+                      <Link href={item.url} className="group ">
+                        <span className="group-hover:translate-x-3 transition-all duration-500">
+                          {item.title}
+                        </span>
+                      </Link>
+                    </MenubarItem>
+                  )}
+                </div>
+              ))}
+            </MenubarContent>
+          </MenubarMenu>
+        </Menubar> */}
+      </div>
       <div className="hidden md:flex lg:hidden">
         <ProfileMenuForHomepage />
       </div>
@@ -166,48 +219,3 @@ const DefaultNavbar: React.FC = () => {
 };
 
 export default DefaultNavbar;
-/* 
-  <Menubar>
-          <MenubarMenu>
-            <MenubarTrigger className="space-x-3">
-              <MenuIcon />
-              <p>All Category</p>
-            </MenubarTrigger>
-            <MenubarContent>
-              {category.map((item, index) => (
-                <div key={index}>
-                  {/* Check if subcategories exist 
-                  {item.sub_Category ? (
-                    <MenubarSub>
-                      <MenubarSubTrigger className="group">
-                        <span className="group-hover:translate-x-3 transition-all duration-500">
-                          {item.title}
-                        </span>
-                      </MenubarSubTrigger>
-                      <MenubarSubContent>
-                        {item.sub_Category.map((subItem, subIndex) => (
-                          <MenubarItem key={subIndex} asChild>
-                            <Link href={subItem.url} className="group ">
-                              <span className="group-hover:translate-x-3 transition-all duration-500">
-                                {subItem.title}
-                              </span>
-                            </Link>
-                          </MenubarItem>
-                        ))}
-                      </MenubarSubContent>
-                    </MenubarSub>
-                  ) : (
-                    <MenubarItem asChild>
-                      <Link href={item.url} className="group ">
-                        <span className="group-hover:translate-x-3 transition-all duration-500">
-                          {item.title}
-                        </span>
-                      </Link>
-                    </MenubarItem>
-                  )}
-                </div>
-              ))}
-            </MenubarContent>
-          </MenubarMenu>
-        </Menubar>
-*/

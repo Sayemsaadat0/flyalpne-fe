@@ -1,12 +1,9 @@
-'use client';
-
-import { Input } from '@/components/ui/input';
 import { Facebook, Instagram, Linkedin } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Button } from '@/components/ui/button2';
+import { Button } from '@/components/ui/button';
 
-const ProfileFooter = () => {
+export const ProfileFooter = () => {
   return (
     <footer className="bg-[#0A1B4D] w-full text-white py-12">
       <div className="container px-4 mx-auto">
@@ -21,6 +18,7 @@ const ProfileFooter = () => {
                 height={48}
                 className="w-[180px]"
               />
+              {/* <span className="font-semibold text-lg">TalenTracker</span> */}
             </div>
             <p className="text-sm text-gray-300 max-w-xs">
               TalenTracker Limited is a full service Human Resources Business Partnering and
@@ -100,7 +98,7 @@ const ProfileFooter = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Newsletter</h3>
             <div className="space-y-2">
-              <Input type="email" placeholder="Enter your email" className="bg-white text-black" />
+              <input type="email" placeholder="Enter your email" className="bg-white text-black" />
               <Button className="w-full bg-[#92C7B6] hover:bg-[#7ab3a1] text-black font-semibold">
                 Subscribe Now
               </Button>
@@ -116,5 +114,3 @@ const ProfileFooter = () => {
     </footer>
   );
 };
-
-export default ProfileFooter;

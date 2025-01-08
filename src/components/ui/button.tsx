@@ -1,75 +1,50 @@
-import { cva, VariantProps } from 'class-variance-authority';
 import * as React from 'react';
-import { cn } from '@/lib/utils'; // Utility for combining class names
+import { Slot } from '@radix-ui/react-slot';
+import { cva, type VariantProps } from 'class-variance-authority';
 
-// Button variants using class-variance-authority
-export const buttonVariants = cva(
-  'leading-none  transition-all disabled:bg-slate-300 text-w-button-1-20 ',
+import { cn } from '@/lib/utils';
+
+const buttonVariants = cva(
+  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0',
   {
     variants: {
       variant: {
-        primarybtn:
-          'rounded-[10px] bg-f-primary-1 transition-all border border-f-primary-1 hover:bg-f-primary-2-300 hover:border-transparent !text-f-white-300',
-        outlineBtn:
-          'rounded-[10px]  border border-f-primary-1 !text-f-primary-1-700 hover:bg-f-primary-1-50  transition-all ',
-        textBtn: 'rounded-[10px] text-oc-primary-1-900 ',
-        paginationBtn: 'rounded-[10px] border rounded-full',
-        ghostBtn: 'rounded-full border',
+        default: 'bg-primary text-primary-foreground shadow hover:bg-primary/90',
+        destructive: 'bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90',
+        outline:
+          'border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground',
+        secondary: 'bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80',
+        ghost: 'hover:bg-accent hover:text-accent-foreground',
+        link: 'text-primary underline-offset-4 hover:underline',
       },
       size: {
-        default: 'py-2.5 px-3 md:px-[32px] md:py-[18px] text-w-paragraph-regular-20',
-        sm: 'py-1.5 px-2 md:px-[24px] md:py-[12px] text-w-small-regular-16',
-        xs: 'py-1.5 px-2 md:px-[18px] md:py-1 text-[14px] ',
-        icon: 'px-3 py-2',
+        default: 'h-9 px-4 py-2',
+        sm: 'h-8 rounded-md px-3 text-xs',
+        lg: 'h-10 rounded-md px-8',
+        icon: 'h-9 w-9',
       },
     },
     defaultVariants: {
-      variant: 'primarybtn',
+      variant: 'default',
       size: 'default',
     },
   },
 );
 
-// Define the Button props interface
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
-  label: string;
-  icon?: any;
-  reverse?: boolean;
+  asChild?: boolean;
 }
 
-const Button: React.FC<ButtonProps> = ({
-  variant,
-  className,
-  label,
-  size,
-  icon,
-  reverse = false,
-  ...props
-}: ButtonProps) => {
-  return (
-    <button
-      className={`whitespace-nowrap   ${cn(buttonVariants({ variant, className, size }))}`}
-      {...props}
-    >
-      <div
-        className={
-          icon &&
-          `text-w-button-1-20 flex justify-center items-center gap-2  ${
-            reverse ? 'flex-row-reverse gap-2' : 'flex-row'
-          }`
-        }
-      >
-        <span>{label}</span>
-        {icon && (
-          <span>
-            <>{icon}</>
-          </span>
-        )}
-      </div>
-    </button>
-  );
-};
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, variant, size, asChild = false, ...props }, ref) => {
+    const Comp = asChild ? Slot : 'button';
+    return (
+      <Comp className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props} />
+    );
+  },
+);
+Button.displayName = 'Button';
 
-export default Button;
+export { Button, buttonVariants };

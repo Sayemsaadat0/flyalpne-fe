@@ -1,8 +1,8 @@
 'use client';
-import { Button } from '@/components/ui/button2';
+// import DropdownMenuContentUser from '@/components/core/DropdownMenuContent/DropdownMenuContentUser';
+import { Button } from '@/components/ui/button';
 import { DropdownMenu, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import { CircleUser } from 'lucide-react';
-import DropdownMenuContentUser from '../../DropdownMenuContent/DropdownMenuContentUser';
 
 export const ProfileMenu = () => {
   return (
@@ -18,7 +18,7 @@ export const ProfileMenu = () => {
       </DropdownMenuTrigger>
 
       {/* dynamic menu links/contents */}
-      <DropdownMenuContentUser />
+      {/* <DropdownMenuContentUser /> */}
     </DropdownMenu>
   );
 };
