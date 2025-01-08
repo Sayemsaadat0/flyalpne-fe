@@ -19,8 +19,7 @@ const SignupPage = () => {
       },
       onSubmit: async (data) => {
         try {
-        } catch (err) {
-        }
+        } catch (err) {}
       },
     });
 

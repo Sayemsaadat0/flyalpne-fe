@@ -1,5 +1,4 @@
 // import AuthPage from '@/components/auth/AuthPage';
-// import DashboardAside from '@/components/core/aside/DashboardAside';
 import DefaultFooter from '@/components/core/footer/DefaultFooter';
 import DashboardTopNavbar from '@/components/core/navbar/DashboardTopNavbar';
 import { Toaster } from '@/components/ui/toaster';
