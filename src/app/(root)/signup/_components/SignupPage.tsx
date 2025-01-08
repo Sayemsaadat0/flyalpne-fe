@@ -17,13 +17,9 @@ const SignupPage = () => {
         confirm_password: '',
         role: 'USER',
       },
-      // validationSchema: UserRegistervalidation,
       onSubmit: async (data) => {
         try {
-          // call registration hooks here
-          // console.log(data);
         } catch (err) {
-          // console.error(err);
         }
       },
     });
