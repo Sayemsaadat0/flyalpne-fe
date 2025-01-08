@@ -3,9 +3,9 @@ import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import Link from 'next/link';
-import TextInput from '@/components/core/input/TextInput';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Button } from '@/components/ui/button';
+import TextInput from '@/components/core/input/TextInput';
 
 // Validation schema
 const validationSchema = Yup.object({
@@ -23,7 +23,7 @@ const LoginContainer = () => {
     onSubmit: async () => {
       try {
         // Call Function Here
-      } catch (err) {}
+      } catch (err) { }
     },
   });
 
@@ -74,9 +74,9 @@ const LoginContainer = () => {
         <div className="w-full flex justify-center">
           <Button
             disabled={isSubmitting}
-            className="w-full md:w-[80%]"
-            // label="Log in"
-          />
+            className="w-full md:w-[80%] text-lg">
+            Login
+          </Button>
         </div>
       </form>
       <div className="text-center">
