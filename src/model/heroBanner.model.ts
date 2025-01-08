@@ -1,4 +1,3 @@
-export interface FeaturedProductType  {
-    thumbnail: string;
-  }
-  
+export interface FeaturedProductType {
+  thumbnail: string;
+}

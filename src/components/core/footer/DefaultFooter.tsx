@@ -58,7 +58,12 @@ const Newsletter: React.FC<NewsletterProps> = ({ handleDataSubmit, isLoading }) 
           placeholder="Enter Your Email"
         />
         <div>
-          <Button  type="submit" variant={'primarybtn'} className="w-full"label={isLoading ? 'Sending..' : 'Sent'} /> 
+          <Button
+            type="submit"
+            variant={'primarybtn'}
+            className="w-full"
+            label={isLoading ? 'Sending..' : 'Sent'}
+          />
         </div>
       </form>
     </div>

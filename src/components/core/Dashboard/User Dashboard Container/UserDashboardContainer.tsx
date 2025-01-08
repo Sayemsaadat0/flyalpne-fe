@@ -2,10 +2,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaAngleDown } from 'react-icons/fa';
-import ProfileFooter from '../../footer/ProfileFooter';
 import MobileMenu from './MobileMenu';
 import { ProfileMenu } from './ProfileMenu';
 import Sidebar from './Sidebar';
+import { ProfileFooter } from '../../footer/ProfileFooter';
 
 const UserDashboardContainer = ({ children }: { children: React.ReactNode }) => {
   return (
