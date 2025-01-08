@@ -1,12 +1,8 @@
-'use client'
-import React from 'react'
+'use client';
+import React from 'react';
 
 const OverviewManagement = () => {
-    return (
-        <div>
-            fsdgsg
-        </div>
-    )
-}
+  return <div>fsdgsg</div>;
+};
 
-export default OverviewManagement
+export default OverviewManagement;

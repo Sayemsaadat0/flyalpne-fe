@@ -1,12 +1,12 @@
-import React from 'react'
-import OverviewManagement from './_components/OverviewManagement'
+import React from 'react';
+import OverviewManagement from './_components/OverviewManagement';
 
 const page = () => {
   return (
     <div>
-        <OverviewManagement />
+      <OverviewManagement />
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;
