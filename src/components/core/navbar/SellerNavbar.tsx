@@ -5,11 +5,11 @@ import Link from 'next/link';
 import { CartIcon, HeartIcon, UserIcon } from '../icons/publicIcon/PublicPageIcons';
 
 // import Logo from '../logo/Logo';
-import DashboardIcon from '../icons/dashboard/DashboardIcon';
 import { usePathname } from 'next/navigation';
 import { ShoppingBag } from 'lucide-react';
 import { SearchInputSeller } from '../input/SearchInputSeller';
 import LogoSeller from '../Logo/LogoSeller';
+import DashboardIcon from '../icons/Dashboard/DashboardIcon';
 
 const NavbarCategory = () => {
   // const category = [

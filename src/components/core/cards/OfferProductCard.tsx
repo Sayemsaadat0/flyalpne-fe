@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { CartIcon, HeartIcon, StarIcon } from '../icons/publicIcon/PublicPageIcons';
 import { Button } from '@/components/ui/button';
-import DashboardIcon from '../icons/dashboard/DashboardIcon';
+import DashboardIcon from '../icons/Dashboard/DashboardIcon';
 
 // Define the type for the component's props
 export type OfferProductCardType = {
