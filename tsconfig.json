@@ -60,7 +60,7 @@
     "src/app/(root)/products/_components/AllProducts.jsx",
     "src/app/(root)/products/_components/Filter Products/PriceRangeSlider.jsx",
     "src/app/(root)/_components/HomeCategorySection.tsx"
-  ],
+, "src/app/(root)/singleSeller/_components/filter-sort.tsx"  ],
   "exclude": ["node_modules", ".next", "out", "dist", "*.d.ts"],
   "types": [
     "types",
