@@ -58,8 +58,9 @@
     "src/components/ui/accordion.jsx",
     "src/app/(root)/products/_components/Filter Products/ProductFilters.jsx",
     "src/app/(root)/products/_components/AllProducts.jsx",
-    "src/app/(root)/products/_components/Filter Products/PriceRangeSlider.jsx"
-, "src/app/(root)/_components/HomeCategorySection.tsx"  ],
+    "src/app/(root)/products/_components/Filter Products/PriceRangeSlider.jsx",
+    "src/app/(root)/_components/HomeCategorySection.tsx"
+  ],
   "exclude": ["node_modules", ".next", "out", "dist", "*.d.ts"],
   "types": [
     "types",

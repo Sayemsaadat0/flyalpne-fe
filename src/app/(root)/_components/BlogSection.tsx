@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import React from 'react';
 
 const BlogSection = () => {
-  let isLoading = false;
+  const isLoading = false;
   return (
     <div>
       <div className="mx-auto">
