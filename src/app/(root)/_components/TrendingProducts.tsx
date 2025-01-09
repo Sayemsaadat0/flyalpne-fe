@@ -3,7 +3,7 @@ import ProductCard from '@/components/core/cards/ProductCard';
 import { CurveIcon } from '@/components/core/icons/publicIcon/QuotationIcon';
 
 const TrendingProducts = () => {
-  const isLoading = false;
+  let isLoading = false;
   return (
     <div className="space-y-10">
       {/* title */}

@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { CartIcon, HeartIcon, UserIcon } from '../icons/publicIcon/PublicPageIcons';
 
 // import Logo from '../logo/Logo';
-import DashboardIcon from '../icons/dashboard/DashboardIcon';
 import { usePathname } from 'next/navigation';
 import { ShoppingBag } from 'lucide-react';
 import { SearchInputSeller } from '../input/SearchInputSeller';
@@ -41,17 +40,17 @@ const NavbarCategory = () => {
     {
       pathname: 'Home',
       path_route: '/',
-      icon: <DashboardIcon size={'24'} />,
+      // icon: <DashboardIcon size={'24'} />,
     },
     {
       pathname: 'Vendors',
       path_route: '/vendors',
-      icon: <DashboardIcon size={'24'} />,
+      // icon: <DashboardIcon size={'24'} />,
     },
     {
       pathname: 'Blogs',
       path_route: '/blogs',
-      icon: <DashboardIcon size={'24'} />,
+      // icon: <DashboardIcon size={'24'} />,
     },
   ];
 

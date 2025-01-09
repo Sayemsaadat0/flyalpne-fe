@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import React from 'react';
 
 const OfferSection = () => {
-  const isLoading = false;
+  let isLoading = false;
   return (
     <div className=" bg-f-primary-2-50">
       <div className="fly-commonContainer py-10 md:py-16 space-y-10">
