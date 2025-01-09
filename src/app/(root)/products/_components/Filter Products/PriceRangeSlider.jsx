@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { Range } from "react-range";
+import { useState } from 'react';
+import { Range } from 'react-range';
 
-import { AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { X } from 'lucide-react';
 
 const PriceRangeSlider = () => {
@@ -13,9 +13,7 @@ const PriceRangeSlider = () => {
   return (
     <AccordionItem value="price">
       <div className="flex items-center justify-between">
-        <AccordionTrigger className="text-sm font-bold text-[#227989]">
-          PRICE
-        </AccordionTrigger>
+        <AccordionTrigger className="text-sm font-bold text-[#227989]">PRICE</AccordionTrigger>
         <X className="h-4 w-4 text-gray-400" />
       </div>
       <AccordionContent>
@@ -28,18 +26,18 @@ const PriceRangeSlider = () => {
             onChange={(values) => setValues(values)}
             renderTrack={({ props, children }) => (
               <div
-              {...props}
-              style={{
-                ...props.style,
-                height: "6px",
-                width: "100%",
-                background: `linear-gradient(to right, 
+                {...props}
+                style={{
+                  ...props.style,
+                  height: '6px',
+                  width: '100%',
+                  background: `linear-gradient(to right, 
                   #ddd ${((values[0] - MIN) / (MAX - MIN)) * 100}%, 
                   #227989 ${((values[0] - MIN) / (MAX - MIN)) * 100}%,
                   #227989 ${((values[1] - MIN) / (MAX - MIN)) * 100}%, 
                   #ddd ${((values[1] - MIN) / (MAX - MIN)) * 100}%)`,
-                borderRadius: "4px",
-              }}
+                  borderRadius: '4px',
+                }}
                 className="bg-f-primary-1-500 rounded-md"
               >
                 {children}
@@ -50,11 +48,11 @@ const PriceRangeSlider = () => {
                 {...props}
                 style={{
                   ...props.style,
-                  height: "16px",
-                  width: "16px",
-                  borderRadius: "50%",
-                  backgroundColor: isDragged ? "#227989" : "#2D808F",
-                  boxShadow: "0px 2px 6px #aaa",
+                  height: '16px',
+                  width: '16px',
+                  borderRadius: '50%',
+                  backgroundColor: isDragged ? '#227989' : '#2D808F',
+                  boxShadow: '0px 2px 6px #aaa',
                 }}
               />
             )}
