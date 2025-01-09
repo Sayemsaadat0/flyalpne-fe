@@ -1,9 +1,10 @@
-import { FC } from 'react';
+import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
+import { FC } from 'react';
 import { CartIcon, HeartIcon, StarIcon } from '../icons/publicIcon/PublicPageIcons';
-import { Button } from '@/components/ui/button';
-import DashboardIcon from '../icons/Dashboard/DashboardIcon';
+import { ShoppingBagIcon } from 'lucide-react';
+// import DashboardIcon from '../icons/Dashboard/DashboardIcon';
 
 // Define the type for the component's props
 export type OfferProductCardType = {
@@ -30,13 +31,13 @@ const OfferProductCard: FC<OfferProductCardType> = ({ title, thumbnail, url }) =
           <p className="bg-f-primary-2-300 h-fit px-5 rounded-br-full absolute top-0">Save 15%</p>
           <div className="w-full  cursor-pointer  h-full lg:w-[350px] aspect-[1/1] absolute  transition-all right-[1000px] group-hover:right-0  flex p-5 flex-col gap-y-3 items-end top-0 bg-f-black-900/30   duration-700">
             <p className="p-1  rounded-[10px] text-f-primary-1-800 bg-f-primary-1-50/50">
-              <DashboardIcon size={'32'} />
+              <ShoppingBagIcon size={'32'} />
             </p>
             <p className="p-1  rounded-[10px] text-f-primary-1-800 bg-f-primary-1-50/50">
               <HeartIcon size={'32'} />
             </p>
             <p className="p-1  rounded-[10px] text-f-primary-1-800 bg-f-primary-1-50/50">
-              <DashboardIcon size={'32'} />
+              <ShoppingBagIcon size={'32'} />
             </p>
           </div>
         </Link>

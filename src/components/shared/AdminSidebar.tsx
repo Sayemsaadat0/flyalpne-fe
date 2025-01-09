@@ -1,7 +1,7 @@
 import { adminSidebarItems } from '@/data/admin.sidebar.dummy.data';
 import { TSidebarItem } from '@/types/types';
 import Link from 'next/link';
-import Logo from '../core/Logo/Logo';
+// import Logo from '../core/Logo/Logo';
 
 const AdminSidebar = () => {
   const renderSidebarItems = (items: TSidebarItem[]) => {
@@ -22,7 +22,8 @@ const AdminSidebar = () => {
   return (
     <div>
       <div className="h-[6rem] flex items-center justify-center">
-        <Logo />
+        {/* <Logo /> */}
+        Logo
       </div>
       <div className="flex flex-col gap-2 font-medium ml-8">
         {renderSidebarItems(adminSidebarItems)}

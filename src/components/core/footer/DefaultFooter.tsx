@@ -10,7 +10,6 @@ import LinkedinIcon from '../icons/publicIcon/LinkedinIcon';
 import SkypeIcon from '../icons/publicIcon/SkypeIcon';
 import WhatsappIcon from '../icons/publicIcon/WhatsappIcon';
 import TextInput from '../input/TextInput';
-import Logo from '../Logo/Logo';
 
 // Define the types for the props of the Newsletter component
 type NewsletterProps = {
@@ -88,7 +87,8 @@ const DefaultFooter: React.FC = () => {
           <div className="w-full lg:w-1/4 flex flex-col gap-y-4">
             <div className="flex flex-col items-center md:items-start text-center md:text-left">
               <div className="">
-                <Logo />
+                {/* <Logo /> */}
+                Logo
               </div>
               <p className="py-3">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, repellat excepturi. Ad
