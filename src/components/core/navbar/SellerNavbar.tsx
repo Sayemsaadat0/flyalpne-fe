@@ -9,7 +9,7 @@ import DashboardIcon from '../icons/dashboard/DashboardIcon';
 import { usePathname } from 'next/navigation';
 import { ShoppingBag } from 'lucide-react';
 import { SearchInputSeller } from '../input/SearchInputSeller';
-import LogoSeller from '../logo/LogoSeller';
+import LogoSeller from '../Logo/LogoSeller';
 
 const NavbarCategory = () => {
   // const category = [

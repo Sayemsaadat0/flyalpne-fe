@@ -1,16 +1,16 @@
 'use client';
 // import { toast } from "@/hooks/use-toast";
-import { useFormik } from 'formik';
-import * as yup from 'yup';
-import TextInput from '../input/TextInput';
-import Link from 'next/link';
-import WhatsappIcon from '../icons/publicIcon/WhatsappIcon';
-import SkypeIcon from '../icons/publicIcon/SkypeIcon';
-import FacebookIcon from '../icons/publicIcon/FacebookIcon';
-import LinkedinIcon from '../icons/publicIcon/LinkedinIcon';
-import InstagramIcon from '../icons/publicIcon/InstagramIcon';
-import Logo from '../logo/Logo';
 import Button from '@/components/ui/button2';
+import { useFormik } from 'formik';
+import Link from 'next/link';
+import * as yup from 'yup';
+import FacebookIcon from '../icons/publicIcon/FacebookIcon';
+import InstagramIcon from '../icons/publicIcon/InstagramIcon';
+import LinkedinIcon from '../icons/publicIcon/LinkedinIcon';
+import SkypeIcon from '../icons/publicIcon/SkypeIcon';
+import WhatsappIcon from '../icons/publicIcon/WhatsappIcon';
+import TextInput from '../input/TextInput';
+import Logo from '../Logo/Logo';
 
 // Define the types for the props of the Newsletter component
 type NewsletterProps = {

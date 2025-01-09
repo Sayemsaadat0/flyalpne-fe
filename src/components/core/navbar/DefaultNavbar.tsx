@@ -20,7 +20,7 @@ import { SearchInput } from '../input/SearchInput';
 // import { CartIcon } from '../icons/publicIcon/PublicPageIcons';
 import MenuIcon from '../icons/publicIcon/MenuIcon';
 import { CartIcon } from '../icons/publicIcon/PublicPageIcons';
-import Logo from '../logo/Logo';
+import Logo from '../Logo/Logo';
 
 const NavbarCategory = () => {
   const category = [
