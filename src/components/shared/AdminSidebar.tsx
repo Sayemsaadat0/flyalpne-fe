@@ -9,12 +9,10 @@ const AdminSidebar = () => {
       <div key={index} className="">
         {/* Main Item */}
         <Link href={item.url ?? ''} className="flex items-center gap-2">
-          {item.icon && <span>{item.icon}</span>}
+          {item.icon && <item.icon />}
           <span>{item.label}</span>
         </Link>
-
-        {/* Recursive Render for Submenu */}
-        {item.children && <div className="space-y-2 mt-2">{renderSidebarItems(item.children)}</div>}
+        {item.children && <div className="space-y-4 mt-4">{renderSidebarItems(item.children)}</div>}
       </div>
     ));
   };
@@ -25,8 +23,8 @@ const AdminSidebar = () => {
         {/* <Logo /> */}
         Logo
       </div>
-      <div className="flex flex-col gap-2 font-medium ml-8">
-        {renderSidebarItems(adminSidebarItems)}
+      <div className="flex flex-col gap-4 font-medium ml-8">
+        {renderSidebarItems(adminSidebarItems as TSidebarItem[])}
       </div>
     </div>
   );

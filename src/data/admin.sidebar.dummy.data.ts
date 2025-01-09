@@ -1,52 +1,64 @@
+import {
+  ChartColumnStacked,
+  GitPullRequestArrow,
+  LayoutDashboard,
+  Mails,
+  ScrollText,
+  Store,
+  Tag,
+  Users,
+  UsersRound,
+} from 'lucide-react';
+
 export const adminSidebarItems = [
   {
-    icon: '',
+    icon: LayoutDashboard,
     label: 'Overview',
     url: '/admin/overview',
   },
   {
-    icon: '',
+    icon: Users,
     label: 'Vendor',
     children: [
       {
-        icon: '',
+        icon: UsersRound,
         label: 'Vendor List',
         url: '/admin/vendor-list',
       },
       {
-        icon: '',
+        icon: GitPullRequestArrow,
         label: 'Vendor Request',
         url: '/admin/vendor-request',
       },
       {
-        icon: '',
+        icon: Store,
         label: 'Stores',
         url: '/admin/vendor-stores',
       },
     ],
   },
   {
-    icon: '',
+    icon: Users,
     label: 'Users',
     url: '/admin/users',
   },
   {
-    icon: '',
+    icon: ChartColumnStacked,
     label: 'Categories',
     url: '/admin/categories',
   },
   {
-    icon: '',
+    icon: Tag,
     label: 'Brands',
     url: '/admin/brands',
   },
   {
-    icon: '',
+    icon: ScrollText,
     label: 'Product List',
     url: '/admin/product-list',
   },
   {
-    icon: '',
+    icon: Mails,
     label: 'Newsletter',
     url: '/admin/newsletter',
   },
