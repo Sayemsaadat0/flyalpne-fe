@@ -7,10 +7,10 @@ export const vendorTableHeader = [
     id: 'name',
     label: 'Name',
   },
-  {
-    id: 'location',
-    label: 'Location',
-  },
+  // {
+  //   id: 'location',
+  //   label: 'Location',
+  // },
   {
     id: 'address',
     label: 'Address',
@@ -23,18 +23,18 @@ export const vendorTableHeader = [
     id: 'license',
     label: 'License',
   },
-  {
-    id: 'totalReviews',
-    label: 'Total Reviews',
-  },
-  {
-    id: 'averageRating',
-    label: 'Average Rating',
-  },
-  {
-    id: 'details',
-    label: 'Details',
-  },
+  // {
+  //   id: 'totalReviews',
+  //   label: 'Total Reviews',
+  // },
+  // {
+  //   id: 'averageRating',
+  //   label: 'Average Rating',
+  // },
+  // {
+  //   id: 'details',
+  //   label: 'Details',
+  // },
   {
     id: 'totalProducts',
     label: 'Total Products',
@@ -55,6 +55,10 @@ export const vendorTableHeader = [
     id: 'returned',
     label: 'Returned',
   },
+  {
+    id: 'action',
+    label: 'Action',
+  },
 ];
 
 export const vendorTableData = [
@@ -65,10 +69,9 @@ export const vendorTableData = [
     address: 'San Francisco, USA',
     tinNumber: '987-654-321',
     license: 'LIC0987654321',
-    totalReviews: 320,
-    averageRating: 4.7,
-    details:
-      'Tech Solutions Ltd. is a leading provider of software and hardware solutions for businesses worldwide.',
+    // totalReviews: 320,
+    // averageRating: 4.7,
+    // details: 'Tech Solutions Ltd. is a leading provider of software solutions.',
     totalProducts: 25,
     totalOrders: 100,
     completed: 86,

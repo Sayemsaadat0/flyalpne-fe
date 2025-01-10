@@ -12,9 +12,9 @@ type TBodyData = {
   address: string;
   tinNumber: string;
   license: string;
-  totalReviews: number;
-  averageRating: number;
-  details: string;
+  totalReviews?: number;
+  averageRating?: number;
+  details?: string;
   totalProducts: number;
   totalOrders: number;
   completed: number;
@@ -41,11 +41,11 @@ const VendorTable = ({ headerData, bodyData }: TVendorTableProps) => {
           </tr>
         </thead>
         <tbody>
-          {Array.from({ length: 5 }).map((_, repeatIdx) =>
-            bodyData.map((bodyItem: TBodyData, idx: number) => {
+          {Array.from({ length: 5 }).map((idx) =>
+            bodyData.map((bodyItem: TBodyData) => {
               return (
                 <tr
-                  key={`${repeatIdx}-${idx}`}
+                  key={idx as number}
                   className="bg-white border-b last:border-b-0 dark:bg-gray-800 dark:border-gray-700"
                 >
                   <th
@@ -55,24 +55,39 @@ const VendorTable = ({ headerData, bodyData }: TVendorTableProps) => {
                     <Image
                       className="rounded-xl"
                       src={bodyItem.logo}
-                      width={500}
-                      height={500}
+                      width={100}
+                      height={100}
                       alt={bodyItem.name}
                     />
                   </th>
                   <td className="px-6 py-4 whitespace-nowrap">{bodyItem.name}</td>
-                  <td className="px-6 py-4 whitespace-nowrap">{bodyItem.location}</td>
                   <td className="px-6 py-4 whitespace-nowrap">{bodyItem.address}</td>
                   <td className="px-6 py-4 whitespace-nowrap">{bodyItem.tinNumber}</td>
                   <td className="px-6 py-4 whitespace-nowrap">{bodyItem.license}</td>
-                  <td className="px-6 py-4 whitespace-nowrap">{bodyItem.totalReviews}</td>
-                  <td className="px-6 py-4 whitespace-nowrap">{bodyItem.averageRating}</td>
-                  <td className="px-6 py-4 whitespace-nowrap">{bodyItem.details}</td>
                   <td className="px-6 py-4 whitespace-nowrap">{bodyItem.totalProducts}</td>
                   <td className="px-6 py-4 whitespace-nowrap">{bodyItem.totalOrders}</td>
                   <td className="px-6 py-4 whitespace-nowrap">{bodyItem.completed}</td>
                   <td className="px-6 py-4 whitespace-nowrap">{bodyItem.cancelled}</td>
                   <td className="px-6 py-4 whitespace-nowrap">{bodyItem.returned}</td>
+                  {/* <td className="px-6 py-4 whitespace-nowrap">
+                    <Select>
+                      <SelectTrigger className="w-[180px]">
+                        <SelectValue placeholder="Select a value" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectGroup>
+                          <SelectLabel>Action</SelectLabel>
+                          <SelectItem value="apple">Apple</SelectItem>
+                          <SelectItem value="banana">Banana</SelectItem>
+                        </SelectGroup>
+                      </SelectContent>
+                    </Select>
+                  </td> */}
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <button className="bg-blue-500 hover:bg-blue-700 duration-500 px-6 py-2 rounded-full text-white">
+                      Action
+                    </button>
+                  </td>
                 </tr>
               );
             }),

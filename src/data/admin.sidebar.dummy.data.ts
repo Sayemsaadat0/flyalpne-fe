@@ -23,12 +23,12 @@ export const adminSidebarItems = [
       {
         icon: UsersRound,
         label: 'Vendor List',
-        url: '/admin/vendor-list',
+        url: '/admin/vendor',
       },
       {
         icon: GitPullRequestArrow,
         label: 'Vendor Request',
-        url: '/admin/vendor-request',
+        url: '/admin/vendor/request',
       },
       {
         icon: Store,
