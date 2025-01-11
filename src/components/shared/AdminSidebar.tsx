@@ -12,7 +12,7 @@ const AdminSidebar = () => {
           {item.icon && <item.icon />}
           <span>{item.label}</span>
         </Link>
-        {item.children && <div className="space-y-4 mt-4">{renderSidebarItems(item.children)}</div>}
+        {/* {item.children && <div className="space-y-4 mt-4">{renderSidebarItems(item.children)}</div>} */}
       </div>
     ));
   };

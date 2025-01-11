@@ -1,30 +1,9 @@
+import { THeaderData, TVendorBodyData } from '@/types/types';
 import Image from 'next/image';
-
-type THeaderData = {
-  id: string;
-  label: string;
-};
-
-type TBodyData = {
-  logo: string;
-  name: string;
-  location: string;
-  address: string;
-  tinNumber: string;
-  license: string;
-  totalReviews?: number;
-  averageRating?: number;
-  details?: string;
-  totalProducts: number;
-  totalOrders: number;
-  completed: number;
-  cancelled: number;
-  returned: number;
-};
 
 type TVendorTableProps = {
   headerData: THeaderData[];
-  bodyData: TBodyData[];
+  bodyData: TVendorBodyData[];
 };
 
 const VendorTable = ({ headerData, bodyData }: TVendorTableProps) => {
@@ -42,7 +21,7 @@ const VendorTable = ({ headerData, bodyData }: TVendorTableProps) => {
         </thead>
         <tbody>
           {Array.from({ length: 5 }).map((idx) =>
-            bodyData.map((bodyItem: TBodyData) => {
+            bodyData.map((bodyItem: TVendorBodyData) => {
               return (
                 <tr
                   key={idx as number}
