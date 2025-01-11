@@ -22,7 +22,7 @@ const ForgetPasswordContainer = () => {
       confirm_password: '',
     },
     validationSchema,
-    onSubmit: async (data : any) => {
+    onSubmit: async (data: any) => {
       try {
         // console.log(data);
       } catch (err) {
