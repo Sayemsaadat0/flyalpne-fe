@@ -1,19 +1,19 @@
-"use client" ;
-import Image from "next/image"
-import Link from "next/link"
+'use client';
+import Image from 'next/image';
+import Link from 'next/link';
 
 interface Product {
-  id: string
-  name: string
-  price: number
-  image: string
+  id: string;
+  name: string;
+  price: number;
+  image: string;
 }
 
 interface ProductGridProps {
-  products: Product[]
+  products: Product[];
 }
 
-export function ProductGrid({ products }: ProductGridProps) {
+export const ProductGrid = ({ products }: ProductGridProps) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
       {products.map((product) => (
@@ -32,6 +32,5 @@ export function ProductGrid({ products }: ProductGridProps) {
         </Link>
       ))}
     </div>
-  )
-}
-
+  );
+};

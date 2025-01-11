@@ -1,22 +1,22 @@
-"use client"
+'use client';
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+} from '@/components/ui/dropdown-menu';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
 
 interface FilterSortProps {
-  productsCount: number
+  productsCount: number;
 }
 
-export function FilterSort({ productsCount }: FilterSortProps) {
-  const [sortOption, setSortOption] = useState("Featured")
+export const FilterSort = ({ productsCount }: FilterSortProps) => {
+  const [sortOption, setSortOption] = useState('Featured');
 
   return (
     <div className="flex justify-between items-center mb-6">
@@ -26,33 +26,24 @@ export function FilterSort({ productsCount }: FilterSortProps) {
           {/* <Label htmlFor="search" className="sr-only">
             Search products
           </Label> */}
-          <Input
-            id="search"
-            placeholder="Search products..."
-            className="w-[200px]"
-          />
+          <Input id="search" placeholder="Search products..." className="w-[200px]" />
         </div>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="outline">Sort: {sortOption}</Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent>
-            <DropdownMenuItem onClick={() => setSortOption("Featured")}>
-              Featured
-            </DropdownMenuItem>
-            <DropdownMenuItem onClick={() => setSortOption("Price: Low to High")}>
+            <DropdownMenuItem onClick={() => setSortOption('Featured')}>Featured</DropdownMenuItem>
+            <DropdownMenuItem onClick={() => setSortOption('Price: Low to High')}>
               Price: Low to High
             </DropdownMenuItem>
-            <DropdownMenuItem onClick={() => setSortOption("Price: High to Low")}>
+            <DropdownMenuItem onClick={() => setSortOption('Price: High to Low')}>
               Price: High to Low
             </DropdownMenuItem>
-            <DropdownMenuItem onClick={() => setSortOption("Newest")}>
-              Newest
-            </DropdownMenuItem>
+            <DropdownMenuItem onClick={() => setSortOption('Newest')}>Newest</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
     </div>
-  )
-}
-
+  );
+};
