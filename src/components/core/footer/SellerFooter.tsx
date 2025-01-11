@@ -12,60 +12,60 @@ import { Button } from '@/components/ui/button';
 // import LogoSeller from "../logo/LogoSeller";
 
 // Define the types for the props of the Newsletter component
-type NewsletterProps = {
-  handleDataSubmit: Function;
-  isLoading: boolean;
-};
+// type NewsletterProps = {
+//   handleDataSubmit: Function;
+//   isLoading: boolean;
+// };
 
-// Newsletter component with type safety
-const Newsletter: React.FC<NewsletterProps> = ({ handleDataSubmit, isLoading }) => {
-  const { handleChange, values, touched, errors, handleSubmit, resetForm } = useFormik({
-    initialValues: {
-      email: '',
-    },
-    validationSchema: yup.object().shape({
-      email: yup.string().email().required('This Field is Required'),
-    }),
-    onSubmit: async (data) => {
-      try {
-        await handleDataSubmit(data);
-        // toast({
-        //     //   variant: 'success',
-        //     description: 'Subscription completed',
-        // });
-        resetForm();
-      } catch (err: any) {
-        err.errors.forEach((key: { attr: string; detail: string }) => {
-          // toast({
-          //     description: `${key?.attr} - ${key?.detail}`,
-          // });
-        });
-      }
-    },
-  });
+// // Newsletter component with type safety
+// const Newsletter: React.FC<NewsletterProps> = ({ handleDataSubmit, isLoading }) => {
+//   const { handleChange, values, touched, errors, handleSubmit, resetForm } = useFormik({
+//     initialValues: {
+//       email: '',
+//     },
+//     validationSchema: yup.object().shape({
+//       email: yup.string().email().required('This Field is Required'),
+//     }),
+//     onSubmit: async (data) => {
+//       try {
+//         await handleDataSubmit(data);
+//         // toast({
+//         //     //   variant: 'success',
+//         //     description: 'Subscription completed',
+//         // });
+//         resetForm();
+//       } catch (err: any) {
+//         err.errors.forEach((key: { attr: string; detail: string }) => {
+//           // toast({
+//           //     description: `${key?.attr} - ${key?.detail}`,
+//           // });
+//         });
+//       }
+//     },
+//   });
 
-  return (
-    <div>
-      <form onSubmit={handleSubmit} className="space-y-3">
-        <TextInput
-          id="email"
-          type="email"
-          name="email"
-          onChange={handleChange}
-          value={values.email}
-          error={Boolean(errors.email) && touched.email ? errors.email : undefined}
-          placeholder="Enter Your Email"
-        />
-        <div>
-          <Button type="submit" disabled={isLoading} className="w-full bg-[#9B3F47] ">
-            {' '}
-            {isLoading ? 'Sending..' : 'Sent'}{' '}
-          </Button>
-        </div>
-      </form>
-    </div>
-  );
-};
+//   return (
+//     <div>
+//       <form onSubmit={handleSubmit} className="space-y-3">
+//         <TextInput
+//           id="email"
+//           type="email"
+//           name="email"
+//           onChange={handleChange}
+//           value={values.email}
+//           error={Boolean(errors.email) && touched.email ? errors.email : undefined}
+//           placeholder="Enter Your Email"
+//         />
+//         <div>
+//           <Button type="submit" disabled={isLoading} className="w-full bg-[#9B3F47] ">
+//             {' '}
+//             {isLoading ? 'Sending..' : 'Sent'}{' '}
+//           </Button>
+//         </div>
+//       </form>
+//     </div>
+//   );
+// };
 
 // Footer component with type safety
 const SellerFooter: React.FC = () => {
@@ -130,7 +130,7 @@ const SellerFooter: React.FC = () => {
             <p className="text-w-paragraph-regular-20 text-center uppercase md:text-left">
               Contact us
             </p>
-            <Newsletter isLoading={false} handleDataSubmit={async () => {}} />
+            {/* <Newsletter isLoading={false} handleDataSubmit={async () => {}} /> */}
             <div className="pt-5">
               <p className="text-w-paragraph-regular-20 whitespace-nowrap text-center md:text-left">
                 Our Every Media

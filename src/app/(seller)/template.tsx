@@ -7,7 +7,7 @@ const template = ({ children }: { children: React.ReactNode }) => {
     <div>
       <SellerNavbar />
       <div className="mt-44 mb-20 md:mt-50 min-h-[50vh] ">{children}</div>
-      {/* <SellerFooter /> */}
+      <SellerFooter />
     </div>
   );
 };
