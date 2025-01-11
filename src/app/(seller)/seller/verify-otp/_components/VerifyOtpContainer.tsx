@@ -1,4 +1,5 @@
 'use client';
+import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import useEmailStore from '@/store/useEmailStore';
@@ -62,7 +63,7 @@ const VerifyOtpContainer = () => {
           <Button
             type="submit"
             disabled={isSubmitting}
-            className="w-full"
+            className="w-full bg-[#9B3F47]"
             // variant={'regulerBtn'}
             label="Send Verification Code"
           />

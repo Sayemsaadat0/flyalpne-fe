@@ -61,7 +61,7 @@
     "src/app/(root)/products/_components/Filter Products/PriceRangeSlider.jsx",
     "src/app/(root)/_components/HomeCategorySection.tsx",
     "src/app/(root)/singleSeller/_components/filter-sort.tsx"
-  ],
+, "src/app/(seller)/seller/forget-password/_component/ForgetPasswordContainer.tsx"  ],
   "exclude": ["node_modules", ".next", "out", "dist", "*.d.ts"],
   "types": [
     "types",

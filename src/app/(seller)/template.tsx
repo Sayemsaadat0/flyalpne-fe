@@ -1,15 +1,13 @@
-import DefaultFooter from '@/components/core/footer/DefaultFooter';
-import DefaultNavbar from '@/components/core/navbar/DefaultNavbar';
-import { Toaster } from '@/components/ui/toaster';
+import SellerFooter from '@/components/core/footer/SellerFooter';
+import SellerNavbar from '@/components/core/navbar/SellerNavbar';
 import React from 'react';
 
 const template = ({ children }: { children: React.ReactNode }) => {
   return (
     <div>
-      <DefaultNavbar />
-      <div className="mt-44 md:mt-50 min-h-[90vh] ">{children}</div>
-      <DefaultFooter />
-      <Toaster />
+      {/* <SellerNavbar /> */}
+      <div className="mt-44 mb-20 md:mt-50 min-h-[50vh] ">{children}</div>
+      {/* <SellerFooter /> */}
     </div>
   );
 };
