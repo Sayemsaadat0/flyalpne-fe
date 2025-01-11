@@ -1,14 +1,16 @@
 'use client';
-import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
 // import { SearchInput } from "../input/SearchInput";
 import { CartIcon, HeartIcon, UserIcon } from '../icons/publicIcon/PublicPageIcons';
 
 // import Logo from '../logo/Logo';
 import { usePathname } from 'next/navigation';
-import { ShoppingBag } from 'lucide-react';
 import { SearchInputSeller } from '../input/SearchInputSeller';
+import { ShoppingBag, ShoppingBagIcon } from 'lucide-react';
 import LogoSeller from '../logo/LogoSeller';
+// import LogoSeller from '../Logo/LogoSeller';
+// import DashboardIcon from '../icons/Dashboard/DashboardIcon';
 
 const NavbarCategory = () => {
   // const category = [
@@ -40,17 +42,17 @@ const NavbarCategory = () => {
     {
       pathname: 'Home',
       path_route: '/',
-      // icon: <DashboardIcon size={'24'} />,
+      icon: <ShoppingBagIcon size={'24'} />,
     },
     {
       pathname: 'Vendors',
       path_route: '/vendors',
-      // icon: <DashboardIcon size={'24'} />,
+      icon: <ShoppingBagIcon size={'24'} />,
     },
     {
       pathname: 'Blogs',
       path_route: '/blogs',
-      // icon: <DashboardIcon size={'24'} />,
+      icon: <ShoppingBagIcon size={'24'} />,
     },
   ];
 

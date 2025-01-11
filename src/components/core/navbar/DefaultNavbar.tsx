@@ -20,7 +20,6 @@ import { SearchInput } from '../input/SearchInput';
 // import { CartIcon } from '../icons/publicIcon/PublicPageIcons';
 import MenuIcon from '../icons/publicIcon/MenuIcon';
 import { CartIcon } from '../icons/publicIcon/PublicPageIcons';
-import Logo from '../logo/Logo';
 
 const NavbarCategory = () => {
   const category = [
@@ -188,7 +187,8 @@ const DefaultNavbar: React.FC = () => {
         </div>
         <div className="flex relative justify-between items-center border-b border-b-f-black-100 py-1">
           <div className="hidden md:block">
-            <Logo />
+            {/* <Logo /> */}
+            Logo
           </div>
           <div className="flex w-full md:w-1/2 justify-center items-center gap-5">
             <div className="w-full">

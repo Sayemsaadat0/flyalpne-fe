@@ -1,8 +1,8 @@
-import { FC } from 'react';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { FC } from 'react';
 import { CartIcon, HeartIcon, StarIcon } from '../icons/publicIcon/PublicPageIcons';
-import { Button } from '@/components/ui/button';
 
 // Define the type for the component's props
 export type OfferProductCardType = {
@@ -74,7 +74,7 @@ const OfferProductCard: FC<OfferProductCardType> = ({ title, thumbnail, url }) =
           </Link>
           <div className="flex justify-between items-center mt-5">
             <p className="font-semibold text-w-title-1-Medium-22 text-f-primary-2-500">500৳</p>
-            <Button> {<CartIcon />} Add</Button>
+            <button> {<CartIcon />} Add </button>
           </div>
         </div>
       </div>

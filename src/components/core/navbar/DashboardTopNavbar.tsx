@@ -1,9 +1,10 @@
 'use client';
-import { FC } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
+import { FC } from 'react';
+// import SignoutIcon from '../icons/Dashboard/SignoutIcon';
 import ArrowIcon from '../icons/publicIcon/ArrowIcon';
-// import { signOut } from 'next-auth/react';
 import SignoutIcon from '../icons/dashboard/SignoutIcon';
+// import { signOut } from 'next-auth/react';
 type MenuItem = {
   path: string;
   label: string;

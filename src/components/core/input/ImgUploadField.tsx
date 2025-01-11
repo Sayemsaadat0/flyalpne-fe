@@ -1,9 +1,9 @@
 // import Button from '@/components/ui/button';
+import { getImgToB64 } from '@/lib/getImgToB64';
 import Image from 'next/image';
 import React, { useState } from 'react';
-import ImgUploadIcon from '../icons/dashboard/ImgUploadIcon';
 import ChangeIcon from '../icons/dashboard/ChangeIcon';
-import { getImgToB64 } from '@/lib/getImgToB64';
+import ImgUploadIcon from '../icons/dashboard/ImgUploadIcon';
 
 interface ImgUploadFieldProps {
   width?: number; // Specify width as an optional number
