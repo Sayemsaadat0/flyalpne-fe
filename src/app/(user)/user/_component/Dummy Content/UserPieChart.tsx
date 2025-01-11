@@ -174,4 +174,4 @@ export const UserPieChart = ({
       </CardFooter>
     </Card>
   );
-}
+};

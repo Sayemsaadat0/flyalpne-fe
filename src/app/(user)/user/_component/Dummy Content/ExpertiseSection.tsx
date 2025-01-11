@@ -53,4 +53,4 @@ export const ExpertiseSection = () => {
       </CardContent>
     </Card>
   );
-}
+};

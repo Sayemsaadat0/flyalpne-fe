@@ -15,4 +15,4 @@ export const StatsCard = ({ label, value, className }: StatsCardProps) => {
       </CardContent>
     </Card>
   );
-}
+};

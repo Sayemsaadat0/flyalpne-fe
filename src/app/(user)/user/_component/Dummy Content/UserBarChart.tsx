@@ -71,4 +71,4 @@ export const UserBarChart = () => {
       </CardFooter>
     </Card>
   );
-}
+};

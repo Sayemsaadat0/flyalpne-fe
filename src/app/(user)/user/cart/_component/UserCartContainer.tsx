@@ -251,6 +251,6 @@ const UserCartContainer = () => {
       </div>
     </motion.div>
   );
-}
+};
 
 export default UserCartContainer;
