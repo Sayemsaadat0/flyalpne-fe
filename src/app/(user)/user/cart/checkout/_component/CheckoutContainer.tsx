@@ -1,5 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 export const CheckoutContainer = ({ props }: any) => {
   return (
     <motion.div
@@ -108,20 +109,26 @@ export const CheckoutContainer = ({ props }: any) => {
                     id="card"
                   />
                   <label htmlFor="payment" className="ml-4 flex gap-2 cursor-pointer">
-                    <img
+                    <Image
                       src="https://readymadeui.com/images/visa.webp"
                       className="w-12"
                       alt="card1"
+                      width={20}
+                      height={20}
                     />
-                    <img
+                    <Image
                       src="https://readymadeui.com/images/american-express.webp"
                       className="w-12"
                       alt="card2"
+                      width={20}
+                      height={20}
                     />
-                    <img
+                    <Image
                       src="https://readymadeui.com/images/master.webp"
                       className="w-12"
                       alt="card3"
+                      width={20}
+                      height={20}
                     />
                   </label>
                 </div>
@@ -134,10 +141,12 @@ export const CheckoutContainer = ({ props }: any) => {
                     id="paypal"
                   />
                   <label htmlFor="payment" className="ml-4 flex gap-2 cursor-pointer">
-                    <img
+                    <Image
                       src="https://readymadeui.com/images/paypal.webp"
                       className="w-20"
                       alt="paypalCard"
+                      width={20}
+                      height={20}
                     />
                   </label>
                 </div>

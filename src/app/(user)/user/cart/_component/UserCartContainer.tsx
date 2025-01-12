@@ -9,6 +9,7 @@ import { Input } from '@/components/ui/input';
 import { Separator } from '@/components/ui/separator';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 interface CartItem {
   id: number;
@@ -131,10 +132,12 @@ const UserCartContainer = () => {
                       onCheckedChange={() => toggleSelectItem(item.id)}
                       className="mt-1.5 absolute left-0 top-0 xl:relative"
                     />
-                    <img
+                    <Image
                       src={item.image}
                       alt={item.name}
                       className="w-20 h-20 object-cover rounded-md"
+                      width={20}
+                      height={20}
                     />
                   </div>
                   <div className="flex-1 space-y-2">
