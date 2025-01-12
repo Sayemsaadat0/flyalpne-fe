@@ -1,5 +1,5 @@
-import UserDashboardContainer from '@/components/core/Dashboard/User Dashboard Container/UserDashboardContainer';
-import ProfileNavbar from '@/components/core/Dashboard/User Dashboard Container/UserDashboardContainer';
+import UserDashboardContainer from '@/components/core/Dashboard/User Dashboard Wrapper/UserDashboardContainer';
+import ProfileNavbar from '@/components/core/Dashboard/User Dashboard Wrapper/UserDashboardContainer';
 import { Toaster } from '@/components/ui/toaster';
 import React from 'react';
 

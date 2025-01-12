@@ -14,7 +14,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 import ProfileMenuForHomepage from '../DropdownMenuContent/ProfileMenuForHomepage';
-import { ProfileMenu } from '../Dashboard/User Dashboard Container/ProfileMenu';
+import { ProfileMenu } from '../Dashboard/User Dashboard Wrapper/ProfileMenu';
 // import Logo from '../Logo/Logo';
 import { SearchInput } from '../input/SearchInput';
 // import { CartIcon } from '../icons/publicIcon/PublicPageIcons';
@@ -159,7 +159,7 @@ const DefaultNavbar: React.FC = () => {
   return (
     <div
       className={`py-2 z-50 bg-f-white-200 transition-all ease-in-out w-full fixed top-0 left-0  `}
-      // ${navBg ? '' : 'absolute top-5 md:top-0'}
+    // ${navBg ? '' : 'absolute top-5 md:top-0'}
     >
       <nav className="fly-commonContainer">
         <div className="hidden md:block">
