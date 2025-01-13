@@ -43,3 +43,21 @@ export type TUserBodyData = {
   phone: string;
   address: string;
 };
+
+export type TReviewBodyData = {
+  vendorLogo: string;
+  userName: string;
+  vendorName: string;
+  productName: string;
+  productImg: string;
+};
+
+export type TCategoryBodyData = {
+  thumbnail: string;
+  categoryName: string;
+};
+
+export type TBrandBodyData = {
+  thumbnail: string;
+  brandName: string;
+};

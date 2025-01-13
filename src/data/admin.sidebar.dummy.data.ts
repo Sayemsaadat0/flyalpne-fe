@@ -4,6 +4,7 @@ import {
   LayoutDashboard,
   Mails,
   ScrollText,
+  Star,
   Store,
   Tag,
   Users,
@@ -56,6 +57,11 @@ export const adminSidebarItems = [
     icon: Users,
     label: 'Users',
     url: '/admin/users',
+  },
+  {
+    icon: Star,
+    label: 'Reviews',
+    url: '/admin/review-management',
   },
   {
     icon: ChartColumnStacked,
