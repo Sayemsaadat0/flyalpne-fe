@@ -61,3 +61,8 @@ export type TBrandBodyData = {
   thumbnail: string;
   brandName: string;
 };
+
+export type TNewsletterBodyData = {
+  email: string;
+  date: string;
+};
