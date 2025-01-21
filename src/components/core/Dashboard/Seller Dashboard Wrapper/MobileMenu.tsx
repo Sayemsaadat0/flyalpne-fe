@@ -20,6 +20,7 @@ const MobileMenu = () => {
         <nav className="grid gap-2 text-lg font-medium">
           <CommonMenu
             setOpen={setOpen} // Close menu when a link is clicked
+            open={true}
           />
         </nav>
       </SheetContent>

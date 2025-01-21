@@ -64,7 +64,8 @@
     "src/app/(seller)/seller/forget-password/_component/ForgetPasswordContainer.tsx",
     "src/app/(user)/user/orders/_component/MyOrders.jsx",
     "src/app/(user)/user/wishlist/_component/Wishlist.jsx",
-    "src/components/ui/select.tsx"
+    "src/components/ui/select.tsx",
+    "src/components/core/Dashboard/Seller Dashboard Wrapper/CommonMenu.jsx"
   ],
   "exclude": ["node_modules", ".next", "out", "dist", "*.d.ts"],
   "types": [
