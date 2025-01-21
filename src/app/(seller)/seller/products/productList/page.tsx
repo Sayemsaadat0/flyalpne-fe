@@ -1,9 +1,10 @@
 import React from 'react';
+import { ProductListContainer } from './_components/ProductListContainer';
 
 const page = () => {
   return (
     <div>
-      <h2>Product list here</h2>
+      <ProductListContainer />
     </div>
   );
 };

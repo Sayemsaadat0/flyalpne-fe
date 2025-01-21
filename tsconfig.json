@@ -67,7 +67,7 @@
     "src/components/ui/select.tsx",
     "src/components/core/Dashboard/Seller Dashboard Wrapper/CommonMenu.jsx",
     "src/app/(seller)/seller/products/addProducts/_components/ProductForm.jsx"
-  ],
+, "src/app/(seller)/seller/products/productList/_components/ProductListContainer.jsx"  ],
   "exclude": ["node_modules", ".next", "out", "dist", "*.d.ts"],
   "types": [
     "types",
