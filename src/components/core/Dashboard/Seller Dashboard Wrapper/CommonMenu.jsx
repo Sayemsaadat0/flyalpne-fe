@@ -1,4 +1,5 @@
 'use client';
+import { IoTrashBinOutline } from 'react-icons/io5';
 import { CiViewList } from 'react-icons/ci';
 import { HomeIcon, Package, ShoppingCart } from 'lucide-react';
 import { FiPieChart } from 'react-icons/fi';
@@ -56,6 +57,14 @@ const CommonMenu = ({ open, setOpen }) => {
               <CiViewList className="h-4 w-4" />
               Product List
             </NavLink>
+            <NavLink
+              href="#"
+              className="flex font-bold items-center gap-3  [&.active]:bg-f-primary-1-300 px-4 [&.active]:text-white rounded-lg py-2 text-muted-foreground transition-all hover:text-primary text-gray-500"
+              onClick={handleLinkClick}
+            >
+              <IoTrashBinOutline className="h-4 w-4" />
+              Product Bin
+            </NavLink>
           </div>
         </AccordionContent>
       </AccordionItem>
@@ -70,7 +79,7 @@ const CommonMenu = ({ open, setOpen }) => {
       </NavLink>
 
       <NavLink
-        href="/seller/wishlist"
+        href="#"
         className="flex font-bold items-center gap-3 [&.active]:bg-f-primary-1-300 px-4 [&.active]:text-white rounded-lg py-2 text-muted-foreground transition-all hover:text-primary"
         onClick={handleLinkClick}
       >

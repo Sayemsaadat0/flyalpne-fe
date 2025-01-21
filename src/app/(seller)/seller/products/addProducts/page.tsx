@@ -1,7 +1,9 @@
+import AddProductContainer from './_components/AddProductContainer';
+
 const page = () => {
   return (
     <div>
-      <h2>Add Products Page</h2>
+      <AddProductContainer />
     </div>
   );
 };
