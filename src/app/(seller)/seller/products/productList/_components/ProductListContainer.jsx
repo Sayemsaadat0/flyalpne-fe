@@ -1,14 +1,31 @@
-"use client"
+'use client';
 
-import { useState } from "react"
-import Image from "next/image"
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { ChevronDown, ChevronUp, MoreHorizontal } from "lucide-react"
-import { dummyProducts } from "@/data/seller.product.dummy.data"
+import { useState } from 'react';
+import Image from 'next/image';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@/components/ui/table';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { ChevronDown, ChevronUp, MoreHorizontal } from 'lucide-react';
+import { dummyProducts } from '@/data/seller.product.dummy.data';
 
 // interface Product {
 //   id: number
@@ -23,27 +40,33 @@ import { dummyProducts } from "@/data/seller.product.dummy.data"
 // }
 
 export const ProductListContainer = () => {
-  const [searchTerm, setSearchTerm] = useState("")
-  const [entriesPerPage, setEntriesPerPage] = useState("20")
-  const [sortColumn, setSortColumn] = useState(null)
-  const [sortDirection, setSortDirection] = useState("asc") ; 
-  const products = dummyProducts; 
+  const [searchTerm, setSearchTerm] = useState('');
+  const [entriesPerPage, setEntriesPerPage] = useState('20');
+  const [sortColumn, setSortColumn] = useState(null);
+  const [sortDirection, setSortDirection] = useState('asc');
+  const products = dummyProducts;
 
   const handleSort = (column) => {
     if (sortColumn === column) {
-      setSortDirection(sortDirection === "asc" ? "desc" : "asc")
+      setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc');
     } else {
-      setSortColumn(column)
-      setSortDirection("asc")
+      setSortColumn(column);
+      setSortDirection('asc');
     }
-  }
+  };
 
-  const filteredProducts = products.filter((product) => product.name.toLowerCase().includes(searchTerm.toLowerCase()))
+  const filteredProducts = products.filter((product) =>
+    product.name.toLowerCase().includes(searchTerm.toLowerCase()),
+  );
 
   const SortIcon = ({ column }) => {
-    if (sortColumn !== column) return null
-    return sortDirection === "asc" ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />
-  }
+    if (sortColumn !== column) return null;
+    return sortDirection === 'asc' ? (
+      <ChevronUp className="w-4 h-4" />
+    ) : (
+      <ChevronDown className="w-4 h-4" />
+    );
+  };
 
   return (
     <div className="container mx-auto py-6">
@@ -79,25 +102,25 @@ export const ProductListContainer = () => {
           <TableHeader>
             <TableRow>
               <TableHead className="w-[100px]">Product</TableHead>
-              <TableHead onClick={() => handleSort("name")} className="cursor-pointer">
+              <TableHead onClick={() => handleSort('name')} className="cursor-pointer">
                 Name <SortIcon column="name" />
               </TableHead>
-              <TableHead onClick={() => handleSort("price")} className="cursor-pointer">
+              <TableHead onClick={() => handleSort('price')} className="cursor-pointer">
                 Price <SortIcon column="price" />
               </TableHead>
-              <TableHead onClick={() => handleSort("offer")} className="cursor-pointer">
+              <TableHead onClick={() => handleSort('offer')} className="cursor-pointer">
                 Offer <SortIcon column="offer" />
               </TableHead>
-              <TableHead onClick={() => handleSort("purchased")} className="cursor-pointer">
+              <TableHead onClick={() => handleSort('purchased')} className="cursor-pointer">
                 Purchased <SortIcon column="purchased" />
               </TableHead>
-              <TableHead onClick={() => handleSort("stock")} className="cursor-pointer">
+              <TableHead onClick={() => handleSort('stock')} className="cursor-pointer">
                 Stock <SortIcon column="stock" />
               </TableHead>
-              <TableHead onClick={() => handleSort("status")} className="cursor-pointer">
+              <TableHead onClick={() => handleSort('status')} className="cursor-pointer">
                 Status <SortIcon column="status" />
               </TableHead>
-              <TableHead onClick={() => handleSort("date")} className="cursor-pointer">
+              <TableHead onClick={() => handleSort('date')} className="cursor-pointer">
                 Date <SortIcon column="date" />
               </TableHead>
               <TableHead>Action</TableHead>
@@ -108,7 +131,7 @@ export const ProductListContainer = () => {
               <TableRow key={product.id}>
                 <TableCell>
                   <Image
-                    src={product.image || "/placeholder.svg"}
+                    src={product.image || '/placeholder.svg'}
                     alt={product.name}
                     width={40}
                     height={40}
@@ -121,10 +144,12 @@ export const ProductListContainer = () => {
                 <TableCell>{product.purchased}</TableCell>
                 <TableCell>{product.stock}</TableCell>
                 <TableCell>
-                  <span className="px-2 py-1 rounded-full text-xs bg-green-100 text-green-800">{product.status}</span>
+                  <span className="px-2 py-1 rounded-full text-xs bg-green-100 text-green-800">
+                    {product.status}
+                  </span>
                 </TableCell>
                 <TableCell>{product.date}</TableCell>
-                <TableCell>
+                <TableCell>~
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                       <Button variant="ghost" className="h-8 w-8 p-0">
@@ -134,8 +159,11 @@ export const ProductListContainer = () => {
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="end">
                       <div className="p-2">
-                        <Button variant="ghost" className="w-full justify-start">
-                          Info
+                        <Button variant="ghost" className="w-full justify-start hover:bg-gray-100 border-b border mb-2 bg-green-100">
+                          Edit
+                        </Button>
+                        <Button variant="ghost" className="w-full justify-start bg-red-100 hover:bg-gray-100 border">
+                          Delete
                         </Button>
                       </div>
                     </DropdownMenuContent>
@@ -164,6 +192,5 @@ export const ProductListContainer = () => {
         </div>
       </div>
     </div>
-  )
-}
-
+  );
+};

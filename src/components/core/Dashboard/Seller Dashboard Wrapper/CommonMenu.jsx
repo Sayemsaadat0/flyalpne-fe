@@ -22,7 +22,7 @@ const CommonMenu = ({ open, setOpen }) => {
   const navigate = useRouter();
 
   return (
-    <Accordion type="single" collapsible className="w-full">
+    <Accordion type="single" collapsible className="w-full  min-w-[250px] ">
       <NavLink
         href="/seller"
         className="flex font-bold items-center gap-3 [&.active]:bg-f-primary-1-300 px-4 [&.active]:text-white rounded-lg py-2 text-muted-foreground transition-all hover:text-primary"
@@ -63,7 +63,7 @@ const CommonMenu = ({ open, setOpen }) => {
               onClick={handleLinkClick}
             >
               <IoTrashBinOutline className="h-4 w-4" />
-              Product Bin
+              Product Details
             </NavLink>
           </div>
         </AccordionContent>

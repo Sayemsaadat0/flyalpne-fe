@@ -10,7 +10,7 @@ import { ProfileFooter } from '../../footer/ProfileFooter';
 const SellerDashboardWrapper = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="grid">
-      <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[240px_1fr] ">
+      <div className="grid min-h-screen w-full md:grid-cols-[240px_1fr] lg:grid-cols-[280px_1fr] ">
         <div className="hidden border-r bg-muted/40 md:block ">
           <Link href="/" className="mt-3 flex justify-center items-center">
             <Image src="/Logo1.png" alt="Logo" width={128} height={128} className="w-32" />

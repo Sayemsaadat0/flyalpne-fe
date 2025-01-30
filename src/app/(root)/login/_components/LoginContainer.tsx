@@ -23,7 +23,7 @@ const LoginContainer = () => {
     onSubmit: async () => {
       try {
         // Call Function Here
-      } catch (err) {}
+      } catch (err) { }
     },
   });
 
@@ -64,7 +64,7 @@ const LoginContainer = () => {
               <p>Remember Me</p>
             </div>
             <Link
-              href={'/verify-email'}
+              href={'/forget-password'}
               className="hover:underline transition-all duration-300 underline-offset-4 font-semibold text-c-white-800"
             >
               Forget Password
