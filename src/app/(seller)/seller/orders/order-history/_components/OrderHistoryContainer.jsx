@@ -90,14 +90,14 @@ export function OrderHistoryContainer() {
   //     (!dateRange.to || order.date <= dateRange.to) &&
   //     (statusFilter.length === 0 || statusFilter.includes(order.status)),
   // );
-  const filteredOrders = orders.filter(order => order.status === 'DELIVERED');
+  const filteredOrders = orders.filter((order) => order.status === 'DELIVERED');
 
   // Calculate pagination
   const totalPages = Math.ceil(filteredOrders.length / Number.parseInt(entriesPerPage));
   const startIndex = (currentPage - 1) * Number.parseInt(entriesPerPage);
   const endIndex = startIndex + Number.parseInt(entriesPerPage);
   const currentOrders = filteredOrders.slice(startIndex, endIndex);
-  console.log("🚀 ~ OrderHistoryContainer ~ currentOrders:", filteredOrders)
+  console.log('🚀 ~ OrderHistoryContainer ~ currentOrders:', filteredOrders);
 
   const getStatusColor = (status) => {
     switch (status) {
@@ -171,9 +171,9 @@ export function OrderHistoryContainer() {
 
         <Popover>
           <PopoverTrigger asChild>
-            <Button variant="outline" className='bg-green-50 border-green-500 '>
+            <Button variant="outline" className="bg-green-50 border-green-500 ">
               <Filter className="mr-2 h-4 w-4" />
-              Filter 
+              Filter
             </Button>
           </PopoverTrigger>
           <PopoverContent className="w-[200px]">
@@ -208,8 +208,8 @@ export function OrderHistoryContainer() {
           <TableHeader>
             <TableRow>
               <TableHead>ID</TableHead>
-              <TableHead>Item</TableHead>
               <TableHead>Customer</TableHead>
+              <TableHead>Email</TableHead>
               <TableHead>Items</TableHead>
               <TableHead>Amount</TableHead>
               <TableHead>Payment</TableHead>
@@ -228,25 +228,13 @@ export function OrderHistoryContainer() {
             ) : (
               currentOrders.map((order) => (
                 <TableRow key={order.id}>
-                  <TableCell className="font-medium">{order.id}</TableCell>
-                  <TableCell>
-                    <div className="flex items-center gap-4">
-                      <Image
-                        src={order.item.image || '/placeholder.svg'}
-                        alt={order.item.name}
-                        className="rounded-md object-cover"
-                        width={40}
-                        height={40}
-                      />
-                      <span className="font-medium">{order.item.name}</span>
-                    </div>
-                  </TableCell>
+                  <TableCell className="font-medium">{order.id}</TableCell>                  
                   <TableCell>
                     <div className="flex flex-col">
-                      <span className="font-medium">{order.customer.name}</span>
-                      <span className="text-sm text-muted-foreground">{order.customer.email}</span>
+                      <span className="font-medium">{order.customer.name}</span>                      
                     </div>
                   </TableCell>
+                  <TableCell>{order.customer.email}</TableCell>
                   <TableCell>{order.items}</TableCell>
                   <TableCell>
                     {new Intl.NumberFormat('en-US', {
@@ -256,11 +244,11 @@ export function OrderHistoryContainer() {
                   </TableCell>
                   <TableCell>{order.payment}</TableCell>
                   <TableCell>
-                    <Badge variant="secondary" className={getStatusColor(order.status)}>
+                    <Badge variant="secondary" className={`${order.status.toLocaleLowerCase() == 'delivered' && 'bg-teal-500'} text-white rounded-full font-extrabold`}>
                       {order.status}
                     </Badge>
                   </TableCell>
-                  <TableCell>{order.date}</TableCell>
+                  <TableCell className="text-xs text-muted-foreground">{order.date}</TableCell>
                   <TableCell>
                     <DropdownMenu>
                       <DropdownMenuTrigger asChild>
