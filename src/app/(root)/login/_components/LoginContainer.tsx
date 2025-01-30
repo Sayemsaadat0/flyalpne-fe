@@ -23,7 +23,7 @@ const LoginContainer = () => {
     onSubmit: async () => {
       try {
         // Call Function Here
-      } catch (err) { }
+      } catch (err) {}
     },
   });
 

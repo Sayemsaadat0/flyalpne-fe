@@ -67,8 +67,9 @@
     "src/components/ui/select.tsx",
     "src/components/core/Dashboard/Seller Dashboard Wrapper/CommonMenu.jsx",
     "src/app/(seller)/seller/products/addProducts/_components/ProductForm.jsx",
-    "src/app/(seller)/seller/products/productList/_components/ProductListContainer.jsx"
-, "src/app/(seller)/seller/orders/_components/NewOrderContainer.jsx"  ],
+    "src/app/(seller)/seller/products/productList/_components/ProductListContainer.jsx",
+    "src/app/(seller)/seller/orders/_components/NewOrderContainer.jsx"
+, "src/app/(seller)/seller/orders/order-history/_components/OrderHistoryContainer.jsx"  ],
   "exclude": ["node_modules", ".next", "out", "dist", "*.d.ts"],
   "types": [
     "types",

@@ -149,7 +149,8 @@ export const ProductListContainer = () => {
                   </span>
                 </TableCell>
                 <TableCell>{product.date}</TableCell>
-                <TableCell>~
+                <TableCell>
+                  ~
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                       <Button variant="ghost" className="h-8 w-8 p-0">
@@ -159,10 +160,16 @@ export const ProductListContainer = () => {
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="end">
                       <div className="p-2">
-                        <Button variant="ghost" className="w-full justify-start hover:bg-gray-100 border-b border mb-2 bg-green-100">
+                        <Button
+                          variant="ghost"
+                          className="w-full justify-start hover:bg-gray-100 border-b border mb-2 bg-green-100"
+                        >
                           Edit
                         </Button>
-                        <Button variant="ghost" className="w-full justify-start bg-red-100 hover:bg-gray-100 border">
+                        <Button
+                          variant="ghost"
+                          className="w-full justify-start bg-red-100 hover:bg-gray-100 border"
+                        >
                           Delete
                         </Button>
                       </div>

@@ -14,6 +14,7 @@ import {
 } from '@/components/ui/accordion';
 import { PiHandbagFill } from 'react-icons/pi';
 import { TbCircleDashedPlus } from 'react-icons/tb';
+import { FaTruck } from 'react-icons/fa6';
 
 const CommonMenu = ({ open, setOpen }) => {
   const handleLinkClick = () => {
@@ -69,13 +70,51 @@ const CommonMenu = ({ open, setOpen }) => {
         </AccordionContent>
       </AccordionItem>
 
+      {/* --- Orders menu --- */}
+      <AccordionItem value="orders" className="border-none">
+        <AccordionTrigger className="hover:no-underline py-2 px-4">
+          <div className="flex font-bold items-center gap-3 text-muted-foreground">
+            <FaTruck className="h-4 w-4 text-f-primary-1-500" />
+            <span className="pr-3">Orders</span>
+          </div>
+        </AccordionTrigger>
+        <AccordionContent>
+          <div className="bg-gray-100  rounded-lg">
+            <NavLink
+              href="/seller/orders/new-order"
+              className="flex font-bold items-center gap-3  [&.active]:bg-f-primary-1-300 px-4 [&.active]:text-white rounded-lg py-2 text-muted-foreground transition-all hover:text-primary text-gray-500"
+              onClick={handleLinkClick}
+            >
+              <TbCircleDashedPlus className="h-4 w-4" />
+              New Orders
+            </NavLink>
+            <NavLink
+              href="/seller/orders/order-history"
+              className="flex font-bold items-center gap-3  [&.active]:bg-f-primary-1-300 px-4 [&.active]:text-white rounded-lg py-2 text-muted-foreground transition-all hover:text-primary text-gray-500"
+              onClick={handleLinkClick}
+            >
+              <CiViewList className="h-4 w-4" />
+              Order History
+            </NavLink>
+            <NavLink
+              href="#"
+              className="flex font-bold items-center gap-3  [&.active]:bg-f-primary-1-300 px-4 [&.active]:text-white rounded-lg py-2 text-muted-foreground transition-all hover:text-primary text-gray-500"
+              onClick={handleLinkClick}
+            >
+              <IoTrashBinOutline className="h-4 w-4" />
+              Order Details
+            </NavLink>
+          </div>
+        </AccordionContent>
+      </AccordionItem>
+
       <NavLink
         href="/seller/orders"
-        className="flex font-bold items-center gap-3 [&.active]:bg-f-primary-1-300 px-4 [&.active]:text-white rounded-lg py-2 text-primary transition-all hover:text-primary"
+        className="flex font-bold items-center gap-3 [&.active]:bg-f-primary-1-300 px-4 [&.active]:text-white rounded-lg py-2 text-md text-primary transition-all hover:text-primary"
         onClick={handleLinkClick}
       >
         <Package className="h-4 w-4" />
-        Orders
+        Graph
       </NavLink>
 
       <NavLink
