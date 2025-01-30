@@ -73,7 +73,7 @@
     "src/app/(seller)/seller/orders/order-details/_components/OrderDetailsContainer.jsx",
     "src/app/(seller)/seller/orders/order-details/_components/OrderDetails.jsx",
     "src/app/(seller)/seller/orders/invoice/_components/InvoiceContainer.jsx"
-  ],
+, "src/app/(seller)/seller/products/product-details/_components/ProductInfo.jsx"  ],
   "exclude": ["node_modules", ".next", "out", "dist", "*.d.ts"],
   "types": [
     "types",
