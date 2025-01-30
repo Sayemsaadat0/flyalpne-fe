@@ -228,10 +228,10 @@ export function OrderHistoryContainer() {
             ) : (
               currentOrders.map((order) => (
                 <TableRow key={order.id}>
-                  <TableCell className="font-medium">{order.id}</TableCell>                  
+                  <TableCell className="font-medium">{order.id}</TableCell>
                   <TableCell>
                     <div className="flex flex-col">
-                      <span className="font-medium">{order.customer.name}</span>                      
+                      <span className="font-medium">{order.customer.name}</span>
                     </div>
                   </TableCell>
                   <TableCell>{order.customer.email}</TableCell>
@@ -244,7 +244,10 @@ export function OrderHistoryContainer() {
                   </TableCell>
                   <TableCell>{order.payment}</TableCell>
                   <TableCell>
-                    <Badge variant="secondary" className={`${order.status.toLocaleLowerCase() == 'delivered' && 'bg-teal-500'} text-white rounded-full font-extrabold`}>
+                    <Badge
+                      variant="secondary"
+                      className={`${order.status.toLocaleLowerCase() == 'delivered' && 'bg-teal-500'} text-white rounded-full font-extrabold`}
+                    >
                       {order.status}
                     </Badge>
                   </TableCell>
