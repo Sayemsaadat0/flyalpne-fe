@@ -15,6 +15,7 @@ import {
 import { PiHandbagFill } from 'react-icons/pi';
 import { TbCircleDashedPlus } from 'react-icons/tb';
 import { FaTruck } from 'react-icons/fa6';
+import { GiPaperTray } from "react-icons/gi";
 
 const CommonMenu = ({ open, setOpen }) => {
   const handleLinkClick = () => {
@@ -103,6 +104,14 @@ const CommonMenu = ({ open, setOpen }) => {
             >
               <IoTrashBinOutline className="h-4 w-4" />
               Order Details
+            </NavLink>
+            <NavLink
+              href="/seller/orders/invoice"
+              className="flex font-bold items-center gap-3  [&.active]:bg-f-primary-1-300 px-4 [&.active]:text-white rounded-lg py-2 text-muted-foreground transition-all hover:text-primary text-gray-500"
+              onClick={handleLinkClick}
+            >
+              <GiPaperTray className="h-4 w-4" />
+              Invoice
             </NavLink>
           </div>
         </AccordionContent>
