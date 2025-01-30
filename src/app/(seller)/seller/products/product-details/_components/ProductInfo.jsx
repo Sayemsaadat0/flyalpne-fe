@@ -38,7 +38,7 @@ const ProductInfo = () => {
       <TabsList className="grid bg-f-primary-1-100 w-full grid-cols-3  border  h-auto p-0">
         <TabsTrigger
           value="detail"
-          className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:shadow-none text-black py-3"
+          className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:shadow-none hover:bg-purple-300 text-black py-3"
         >
           <FileText className="h-4 w-4 mr-2" />
           Detail
@@ -46,7 +46,7 @@ const ProductInfo = () => {
 
         <TabsTrigger
           value="info"
-          className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:shadow-none py-3 text-black"
+          className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:shadow-none py-3 hover:bg-purple-300 text-black"
         >
           <Info className="h-4 w-4 mr-2" />
           Info
@@ -54,7 +54,7 @@ const ProductInfo = () => {
 
         <TabsTrigger
           value="reviews"
-          className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:shadow-none py-3 text-black"
+          className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:shadow-none py-3 hover:bg-purple-300 text-black"
         >
           <Star className="h-4 w-4 mr-2" />
           Reviews
