@@ -97,7 +97,7 @@ const CommonMenu = ({ open, setOpen }) => {
               Order History
             </NavLink>
             <NavLink
-              href="#"
+              href="/seller/orders/order-details"
               className="flex font-bold items-center gap-3  [&.active]:bg-f-primary-1-300 px-4 [&.active]:text-white rounded-lg py-2 text-muted-foreground transition-all hover:text-primary text-gray-500"
               onClick={handleLinkClick}
             >
