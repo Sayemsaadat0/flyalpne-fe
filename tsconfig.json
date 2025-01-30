@@ -71,8 +71,9 @@
     "src/app/(seller)/seller/orders/_components/NewOrderContainer.jsx",
     "src/app/(seller)/seller/orders/order-history/_components/OrderHistoryContainer.jsx",
     "src/app/(seller)/seller/orders/order-details/_components/OrderDetailsContainer.jsx",
-    "src/app/(seller)/seller/orders/order-details/_components/OrderDetails.jsx"
-, "src/app/(seller)/seller/orders/invoice/_components/InvoiceContainer.jsx"  ],
+    "src/app/(seller)/seller/orders/order-details/_components/OrderDetails.jsx",
+    "src/app/(seller)/seller/orders/invoice/_components/InvoiceContainer.jsx"
+  ],
   "exclude": ["node_modules", ".next", "out", "dist", "*.d.ts"],
   "types": [
     "types",

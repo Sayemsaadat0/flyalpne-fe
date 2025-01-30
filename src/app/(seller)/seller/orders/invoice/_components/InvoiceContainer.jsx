@@ -1,8 +1,15 @@
-import Image from "next/image"
-import { Save, Printer } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
-import { Card, CardContent } from "@/components/ui/card"
+import Image from 'next/image';
+import { Save, Printer } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@/components/ui/table';
+import { Card, CardContent } from '@/components/ui/card';
 
 // interface InvoiceProps {
 //   invoiceNumber: string
@@ -35,30 +42,29 @@ import { Card, CardContent } from "@/components/ui/card"
 // }
 
 export default function InvoiceContainer({
-  invoiceNumber = "125",
+  invoiceNumber = '125',
   from = {
-    name: "Ekka",
-    address: "47 Elita Squre, VIP Chowk",
-    email: "example@gmail.com",
-    phone: "+91 5264 251 325",
+    name: 'Ekka',
+    address: '47 Elita Squre, VIP Chowk',
+    email: 'example@gmail.com',
+    phone: '+91 5264 251 325',
   },
   to = {
-    name: "John Marle",
-    address: "58 Jamie Ways, North Faye, Q5 5ZP",
-    email: "example@gmail.com",
-    phone: "+91 5264 521 943",
+    name: 'John Marle',
+    address: '58 Jamie Ways, North Faye, Q5 5ZP',
+    email: 'example@gmail.com',
+    phone: '+91 5264 521 943',
   },
   details = {
-    invoiceId: "#2365546",
-    date: "March 25, 2018",
-    vat: "PL654121545O",
+    invoiceId: '#2365546',
+    date: 'March 25, 2018',
+    vat: 'PL654121545O',
   },
   items = [
     {
       id: 1,
-      image:
-        "/assets/img/products/p12.jpg",
-      name: "Baby Pink Shoese",
+      image: '/assets/img/products/p12.jpg',
+      name: 'Baby Pink Shoese',
       description: "Amazing shoes with 10 day's replacement warenty",
       quantity: 4,
       unitCost: 50.0,
@@ -66,39 +72,36 @@ export default function InvoiceContainer({
     },
     {
       id: 2,
-      image:
-        "/assets/img/products/p13.jpg",
-      name: "Man T-Shirt with Cap Style",
-      description: "Long Sleeve men T-shirt with cap in Dark Blue Color",
+      image: '/assets/img/products/p13.jpg',
+      name: 'Man T-Shirt with Cap Style',
+      description: 'Long Sleeve men T-shirt with cap in Dark Blue Color',
       quantity: 10,
       unitCost: 50.0,
       total: 500.0,
     },
     {
       id: 3,
-      image:
-        "/assets/img/products/p15.jpg",
-      name: "Full Sleeve T-Shirt for men",
-      description: "Amazing T-shirt in pure Cotton for both",
+      image: '/assets/img/products/p15.jpg',
+      name: 'Full Sleeve T-Shirt for men',
+      description: 'Amazing T-shirt in pure Cotton for both',
       quantity: 10,
       unitCost: 20.0,
       total: 200.0,
     },
     {
       id: 4,
-      image:
-        "/assets/img/products/p16.jpg",
-      name: "Round Hat for Men",
-      description: "Pure Leather Hat for men with black round tap",
+      image: '/assets/img/products/p16.jpg',
+      name: 'Round Hat for Men',
+      description: 'Pure Leather Hat for men with black round tap',
       quantity: 6,
       unitCost: 50.0,
       total: 300.0,
     },
   ],
 }) {
-  const subtotal = items.reduce((sum, item) => sum + item.total, 0)
-  const vat = subtotal * 0.1 // 10% VAT
-  const total = subtotal + vat
+  const subtotal = items.reduce((sum, item) => sum + item.total, 0);
+  const vat = subtotal * 0.1; // 10% VAT
+  const total = subtotal + vat;
 
   return (
     <Card className="max-w-5xl mx-auto">
@@ -107,11 +110,19 @@ export default function InvoiceContainer({
         <div className="flex justify-between items-center">
           <h1 className="text-2xl font-semibold text-gray-800">Invoice #{invoiceNumber}</h1>
           <div className="flex gap-2">
-            <Button variant="outline" size="sm" className="bg-[#8BA4F9] text-white hover:bg-[#7B93E8]">
+            <Button
+              variant="outline"
+              size="sm"
+              className="bg-[#8BA4F9] text-white hover:bg-[#7B93E8]"
+            >
               <Save className="w-4 h-4 mr-2" />
               Save
             </Button>
-            <Button variant="outline" size="sm" className="bg-[#8BA4F9] text-white hover:bg-[#7B93E8]">
+            <Button
+              variant="outline"
+              size="sm"
+              className="bg-[#8BA4F9] text-white hover:bg-[#7B93E8]"
+            >
               <Printer className="w-4 h-4 mr-2" />
               Print
             </Button>
@@ -162,7 +173,7 @@ export default function InvoiceContainer({
                   <TableCell>{item.id}</TableCell>
                   <TableCell>
                     <Image
-                      src={item.image || "/placeholder.svg"}
+                      src={item.image || '/placeholder.svg'}
                       alt={item.name}
                       width={40}
                       height={40}
@@ -198,6 +209,5 @@ export default function InvoiceContainer({
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }
-

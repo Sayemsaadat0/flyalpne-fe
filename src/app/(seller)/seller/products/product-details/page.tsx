@@ -1,10 +1,10 @@
 import React from 'react';
-import InvoiceContainer from './_components/InvoiceContainer';
+import ProductDetails from './_components/ProductDetailsContainer';
 
 const page = () => {
   return (
     <div>
-      <InvoiceContainer />
+      <ProductDetails />
     </div>
   );
 };
