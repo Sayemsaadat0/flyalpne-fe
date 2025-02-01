@@ -1,7 +1,9 @@
+import SellerInfoContainer from "./seller-info/_components/SellerInfoContainer";
+
 const page = () => {
   return (
     <div>
-      <h2>Seller Pageeeeee</h2>
+      <SellerInfoContainer />
     </div>
   );
 };

@@ -35,8 +35,17 @@ const CommonMenu = ({ open, setOpen }) => {
         onClick={handleLinkClick}
       >
         <FiPieChart className="h-4 w-4" />
-        Dashboard
+        Seller Info
       </NavLink>
+
+      {/* <NavLink
+        href="/seller/seller-info"
+        className="flex font-bold items-center gap-3 [&.active]:bg-f-primary-1-300 px-4 [&.active]:text-white rounded-lg py-2 text-muted-foreground transition-all hover:text-primary"
+        onClick={handleLinkClick}
+      >
+        <FiPieChart className="h-4 w-4" />
+        Seller Info
+      </NavLink> */}
 
       {/* --- Products menu --- */}
       <AccordionItem value="store" className="border-none">
