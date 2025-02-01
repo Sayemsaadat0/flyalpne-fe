@@ -81,12 +81,12 @@ const CreateStoreContainer = () => {
   return (
     <div className="container mx-auto p-6">
       <div className="flex flex-col gap-4 lg:flex-row justify-between items-center mb-6">
-        <div className="flex justify-start items-center gap-2">
+        <div className="flex justify-start items-center gap-1">
           <Image
-            className="rounded-xl"
+            className="rounded-xl w-20 h-20"
             src="/assets/img/shop.png"
-            width={80}
-            height={80}
+            width={100}
+            height={100}
             alt="shop logo"
           />
           <h1 className="text-2xl font-bold">Create Store</h1>

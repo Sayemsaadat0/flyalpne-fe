@@ -6,6 +6,7 @@ import { FiPieChart } from 'react-icons/fi';
 import { useRouter } from 'next/navigation';
 import { FaRegHeart } from 'react-icons/fa';
 import { IoStorefrontOutline } from 'react-icons/io5';
+import { RiStoreLine } from 'react-icons/ri';
 
 import NavLink from '@/lib/NavLink/NavLink';
 import {
@@ -40,7 +41,7 @@ const CommonMenu = ({ open, setOpen }) => {
       <AccordionItem value="store" className="border-none">
         <AccordionTrigger className="hover:no-underline py-2 px-4">
           <div className="flex font-bold items-center gap-3 text-muted-foreground">
-            <IoStorefrontOutline className="h-4 w-4 text-purple-900" />
+            <IoStorefrontOutline className="h-4 w-4 text-blue-500" />
             <span className="pr-3">Store</span>
           </div>
         </AccordionTrigger>
@@ -53,6 +54,14 @@ const CommonMenu = ({ open, setOpen }) => {
             >
               <TbCircleDashedPlus className="h-4 w-4" />
               Create Store
+            </NavLink>
+            <NavLink
+              href="/seller/store/view-stores"
+              className="flex font-bold items-center gap-3  [&.active]:bg-f-primary-1-300 px-4 [&.active]:text-white rounded-lg py-2 text-muted-foreground transition-all hover:text-primary text-gray-500"
+              onClick={handleLinkClick}
+            >
+              <RiStoreLine className="h-4 w-4" />
+              View Stores
             </NavLink>
           </div>
         </AccordionContent>
