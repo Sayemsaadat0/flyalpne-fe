@@ -5,6 +5,8 @@ import { HomeIcon, Package, ShoppingCart } from 'lucide-react';
 import { FiPieChart } from 'react-icons/fi';
 import { useRouter } from 'next/navigation';
 import { FaRegHeart } from 'react-icons/fa';
+import { IoStorefrontOutline } from 'react-icons/io5';
+
 import NavLink from '@/lib/NavLink/NavLink';
 import {
   Accordion,
@@ -34,6 +36,29 @@ const CommonMenu = ({ open, setOpen }) => {
         Dashboard
       </NavLink>
 
+      {/* --- Products menu --- */}
+      <AccordionItem value="store" className="border-none">
+        <AccordionTrigger className="hover:no-underline py-2 px-4">
+          <div className="flex font-bold items-center gap-3 text-muted-foreground">
+            <IoStorefrontOutline className="h-4 w-4 text-purple-900" />
+            <span className="pr-3">Store</span>
+          </div>
+        </AccordionTrigger>
+        <AccordionContent>
+          <div className="bg-gray-100  rounded-lg">
+            <NavLink
+              href="/seller/store/create-store"
+              className="flex font-bold items-center gap-3  [&.active]:bg-f-primary-1-300 px-4 [&.active]:text-white rounded-lg py-2 text-muted-foreground transition-all hover:text-primary text-gray-500"
+              onClick={handleLinkClick}
+            >
+              <TbCircleDashedPlus className="h-4 w-4" />
+              Create Store
+            </NavLink>
+          </div>
+        </AccordionContent>
+      </AccordionItem>
+
+      {/* --- Products menu --- */}
       <AccordionItem value="products" className="border-none">
         <AccordionTrigger className="hover:no-underline py-2 px-4">
           <div className="flex font-bold items-center gap-3 text-muted-foreground">
