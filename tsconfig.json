@@ -74,7 +74,8 @@
     "src/app/(seller)/seller/orders/order-details/_components/OrderDetails.jsx",
     "src/app/(seller)/seller/orders/invoice/_components/InvoiceContainer.jsx",
     "src/app/(seller)/seller/products/product-details/_components/ProductInfo.jsx",
-    "src/app/(seller)/seller/store/create-store/_components/CreateStoreContainer.jsx"
+    "src/app/(seller)/seller/store/create-store/_components/CreateStoreContainer.jsx",
+    "src/app/(seller)/seller/store/edit-store/_components/EditStoreContainer.jsx"
   ],
   "exclude": ["node_modules", ".next", "out", "dist", "*.d.ts"],
   "types": [

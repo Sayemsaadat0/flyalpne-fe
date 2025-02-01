@@ -7,6 +7,7 @@ import { useRouter } from 'next/navigation';
 import { FaRegHeart } from 'react-icons/fa';
 import { IoStorefrontOutline } from 'react-icons/io5';
 import { RiStoreLine } from 'react-icons/ri';
+import { MdMovieEdit } from 'react-icons/md';
 
 import NavLink from '@/lib/NavLink/NavLink';
 import {
@@ -62,6 +63,14 @@ const CommonMenu = ({ open, setOpen }) => {
             >
               <RiStoreLine className="h-4 w-4" />
               View Stores
+            </NavLink>
+            <NavLink
+              href="/seller/store/edit-store"
+              className="flex font-bold items-center gap-3  [&.active]:bg-f-primary-1-300 px-4 [&.active]:text-white rounded-lg py-2 text-muted-foreground transition-all hover:text-primary text-gray-500"
+              onClick={handleLinkClick}
+            >
+              <MdMovieEdit className="h-4 w-4" />
+              Edit Store
             </NavLink>
           </div>
         </AccordionContent>
@@ -151,7 +160,7 @@ const CommonMenu = ({ open, setOpen }) => {
         </AccordionContent>
       </AccordionItem>
 
-      <NavLink
+      {/* <NavLink
         href="/seller/orders"
         className="flex font-bold items-center gap-3 [&.active]:bg-f-primary-1-300 px-4 [&.active]:text-white rounded-lg py-2 text-md text-primary transition-all hover:text-primary"
         onClick={handleLinkClick}
@@ -167,7 +176,7 @@ const CommonMenu = ({ open, setOpen }) => {
       >
         <FaRegHeart className="h-4 w-4" />
         Wish List
-      </NavLink>
+      </NavLink> */}
 
       <button
         className="flex font-bold items-center gap-3 [&.active]:bg-f-primary-1-300 px-4 [&.active]:text-white rounded-lg py-2 text-muted-foreground transition-all hover:text-primary w-full text-left"
